@@ -11,6 +11,12 @@ blocks:
       secrets:
         - name: aws-website
       jobs:
+       - name: Copy to Server
+       - commands:
+        - checkout
+        - cache restore website-build
+        - lftp --help
+        - lftp -c "open -u $FTP_USER,$FTP_PASSWORD YOUR_FTP_HOST; set ssl:verify-certificate no; mirror -R ./ YOUR_REMOTE_PATH"
         # - name: Copy to S3
         #   commands:
         #     - checkout
