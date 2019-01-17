@@ -34,8 +34,8 @@ Friedrichstr. 219 <br>
 Telefon: 030 13889-0 <br>
 Telefax: 030 2155050 <br>
 mailbox@datenschutz-berlin.de <br>
-Bankverbindung
 
+### Bankverbindung
 ::: adress
 **Johannisches Sozialwerk e.V.** <br>
 Bank für Sozialwirtschaft <br>
