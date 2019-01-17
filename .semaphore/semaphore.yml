@@ -29,7 +29,8 @@ blocks:
             - yarn build
             # The script puts website files in directory `public`,
             # store it in cache to propagate to deployment:
-            - cache store website-build dist
+            - cache delete website-build
+            - cache store website-build dist/
 
 promotions:
   - name: Production deploy
