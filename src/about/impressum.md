@@ -13,14 +13,14 @@ permalink: /:slug/
 ## Impressum
 
 ::: adress
-**Johannische Jugend**
+**Johannische Jugend** <br>
 Bismarckallee 23
 14193 Berlin
 jugend@johannische-kirche.org
 :::
 
 ::: adress
-**Träger der Johannischen Jugend ist das Johannische Sozialwerk e.V.**
+**Träger der Johannischen Jugend ist das Johannische Sozialwerk e.V.** <br>
 Vertretungsberechtigter Vorstand
 Josephine Müller, Bodo Elsner, Otto-Ewald Marek, Joachim Steffen
 Aufsichtsbehörde
@@ -36,11 +36,11 @@ mailbox@datenschutz-berlin.de
 Bankverbindung
 
 ::: adress
-**Johannisches Sozialwerk e.V.**
-Bank für Sozialwirtschaft
-BLZ: 100 205 00
-Konto-Nr.: 311 44 09
-IBAN: DE 34 100 205 000 003 114 409
+**Johannisches Sozialwerk e.V.** <br>
+Bank für Sozialwirtschaft <br>
+BLZ: 100 205 00 <br>
+Konto-Nr.: 311 44 09 <br>
+IBAN: DE 34 100 205 000 003 114 409 <br>
 BIC: BFSWDE33BER
 :::
 
@@ -52,19 +52,19 @@ Haftungshinweis: Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir kein
 
 Diese Datenschutzerklärung klärt Sie über die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten (nachfolgend kurz „Daten“) innerhalb unseres Onlineangebotes und der mit ihm verbundenen Webseiten, Funktionen und Inhalte sowie externen Onlinepräsenzen, wie z.B. unser Social Media Profile auf. (nachfolgend gemeinsam bezeichnet als „Onlineangebot“). Im Hinblick auf die verwendeten Begrifflichkeiten, wie z.B. „Verarbeitung“ oder „Verantwortlicher“ verweisen wir auf die Definitionen im Art. 4 der Datenschutzgrundverordnung (DSGVO).
 
-Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail oder wenden Sie sich direkt an unseren Datenschutzbeauftragten: Kontaktdaten: Cornelia Krewedl, c.krewedl@js-ev.de
-**Verantwortlicher**
-Johannische Jugend
-Bismarckallee 23
+Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail oder wenden Sie sich direkt an unseren Datenschutzbeauftragten: <br> Kontaktdaten: Cornelia Krewedl, c.krewedl@js-ev.de <br>
+**Verantwortlicher** <br>
+Johannische Jugend <br>
+Bismarckallee 23 <br>
 D-14193 Berlin
 
 ### Arten der verarbeiteten Daten
 
-- Bestandsdaten (z.B., Namen, Adressen).
-- Kontaktdaten (z.B., E-Mail, Telefonnummern).
-- Inhaltsdaten (z.B., Texteingaben, Fotografien, Videos).
-- Nutzungsdaten (z.B., besuchte Webseiten, Interesse an Inhalten, Zugriffszeiten).
-- Meta-/Kommunikationsdaten (z.B., Geräte-Informationen, IP-Adressen).
+- Bestandsdaten (z.B. Namen, Adressen).
+- Kontaktdaten (z.B. E-Mail, Telefonnummern).
+- Inhaltsdaten (z.B. Texteingaben, Fotografien, Videos).
+- Nutzungsdaten (z.B. besuchte Webseiten, Interesse an Inhalten, Zugriffszeiten).
+- Meta-/Kommunikationsdaten (z.B. Geräte-Informationen, IP-Adressen).
 
 ### Zweck der Verarbeitung
 
@@ -113,7 +113,7 @@ Sie haben ferner gem. Art. 77 DSGVO das Recht, eine Beschwerde bei der zuständi
 
 ## Widerrufsrecht
 
-Sie haben das Recht, erteilte Einwilligungen gem. Art. 7 Abs. 3 DSGVO mit Wirkung für die Zukunft zu widerrufen
+Sie haben das Recht, erteilte Einwilligungen gem. Art. 7 Abs. 3 DSGVO mit Wirkung für die Zukunft zu widerrufen.
 
 ## Widerspruchsrecht
 
