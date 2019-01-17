@@ -8,8 +8,8 @@ agent:
 blocks:
   - name: Deploy
     task:
-      # secrets:
-      #   - name: aws-website
+      secrets:
+        - name: jjbgf-secrets
       jobs:
         - name: Copy to Server
           commands:
