@@ -15,26 +15,27 @@ permalink: /:slug/
 ::: adress
 **Johannische Jugend** <br>
 Bismarckallee 23
-14193 Berlin
+14193 Berlin <br>
 jugend@johannische-kirche.org
 :::
 
 ::: adress
 **Träger der Johannischen Jugend ist das Johannische Sozialwerk e.V.** <br>
-Vertretungsberechtigter Vorstand
-Josephine Müller, Bodo Elsner, Otto-Ewald Marek, Joachim Steffen
-Aufsichtsbehörde
+Vertretungsberechtigter Vorstand <br>
+Josephine Müller, Bodo Elsner, Otto-Ewald Marek, Joachim Steffen <br>
+<br>
+Aufsichtsbehörde <br>
 Berliner Beauftragte für
-Datenschutz und Informationsfreiheit
-Friedrichstr. 219
+Datenschutz und Informationsfreiheit <br>
+Friedrichstr. 219 <br>
 10969 Berlin
 :::
 
-Telefon: 030 13889-0
-Telefax: 030 2155050
-mailbox@datenschutz-berlin.de
-Bankverbindung
+Telefon: 030 13889-0 <br>
+Telefax: 030 2155050 <br>
+mailbox@datenschutz-berlin.de <br>
 
+### Bankverbindung
 ::: adress
 **Johannisches Sozialwerk e.V.** <br>
 Bank für Sozialwirtschaft <br>
@@ -53,6 +54,7 @@ Haftungshinweis: Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir kein
 Diese Datenschutzerklärung klärt Sie über die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten (nachfolgend kurz „Daten“) innerhalb unseres Onlineangebotes und der mit ihm verbundenen Webseiten, Funktionen und Inhalte sowie externen Onlinepräsenzen, wie z.B. unser Social Media Profile auf. (nachfolgend gemeinsam bezeichnet als „Onlineangebot“). Im Hinblick auf die verwendeten Begrifflichkeiten, wie z.B. „Verarbeitung“ oder „Verantwortlicher“ verweisen wir auf die Definitionen im Art. 4 der Datenschutzgrundverordnung (DSGVO).
 
 Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail oder wenden Sie sich direkt an unseren Datenschutzbeauftragten: <br> Kontaktdaten: Cornelia Krewedl, c.krewedl@js-ev.de <br>
+<br>
 **Verantwortlicher** <br>
 Johannische Jugend <br>
 Bismarckallee 23 <br>
