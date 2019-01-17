@@ -6,58 +6,69 @@ agent:
     os_image: ubuntu1804
 
 blocks:
+blocks:
+  - name: Install dependencies
+    task:
+      jobs:
+        - name: npm install and cache
+          commands:
+            - checkout
+            - cache restore node-modules-$SEMAPHORE_GIT_BRANCH-$(checksum yarn.lock),node-modules-$SEMAPHORE_GIT_BRANCH,node-modules-master
+            - yarn install
+            - cache store node-modules-$SEMAPHORE_GIT_BRANCH-$(checksum yarn.lock) node_modules
+
   - name: "Build"
     task:
       env_vars:
         - name: APP_ENV
           value: prod
       jobs:
-      - name: Docker build
+      - name: Build
         commands:
           - checkout
           - ls -1
           - echo $APP_ENV
-          - echo "Docker build..."
+          - yarn build
           - echo "done"
 
-  - name: "Smoke tests"
-    task:
-      jobs:
-      - name: Smoke
-        commands:
-          - checkout
-          - echo "make smoke"
+  # - name: "Smoke tests"
+  #   task:
+  #     jobs:
+  #     - name: Smoke
+  #       commands:
+  #         - checkout
+  #         - echo "make smoke"
 
-  - name: "Unit tests"
-    task:
-      jobs:
-      - name: RSpec
-        commands:
-          - checkout
-          - echo "make rspec"
+  # - name: "Unit tests"
+  #   task:
+  #     jobs:
+  #     - name: RSpec
+  #       commands:
+  #         - checkout
+  #         - echo "make rspec"
 
-      - name: Lint code
-        commands:
-          - checkout
-          - echo "make lint"
+  #     - name: Lint code
+  #       commands:
+  #         - checkout
+  #         - echo "make lint"
 
-      - name: Check security
-        commands:
-          - checkout
-          - echo "make security"
+  #     - name: Check security
+  #       commands:
+  #         - checkout
+  #         - echo "make security"
 
-  - name: "Integration tests"
-    task:
-      jobs:
-      - name: Cucumber
-        commands:
-          - checkout
-          - echo "make cucumber"
+  # - name: "Integration tests"
+  #   task:
+  #     jobs:
+  #     - name: Cucumber
+  #       commands:
+  #         - checkout
+  #         - echo "make cucumber"
 
-  - name: "Push Image"
-    task:
-      jobs:
-      - name: Push
-        commands:
-          - checkout
-          - echo "make docker.push"
+  # - name: "Push Image"
+  #   task:
+  #     jobs:
+  #     - name: Push
+  #       commands:
+  #         - checkout
+  #         - echo "make docker.push"
