@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vuepress dev src",
-    "build": "vuepress build src -d ./dist"
+    "serve": "yarn vuepress dev src",
+    "build": "yarn vuepress build src -d ./dist"
   },
   "dependencies": {
     "moment": "^2.22.2",
