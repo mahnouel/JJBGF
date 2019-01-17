@@ -6,7 +6,6 @@ agent:
     os_image: ubuntu1804
 
 blocks:
-blocks:
   - name: Install dependencies
     task:
       jobs:
@@ -23,14 +22,13 @@ blocks:
         - name: APP_ENV
           value: prod
       jobs:
-      - name: Build
-        commands:
-          - checkout
-          - ls -1
-          - echo $APP_ENV
-          - yarn build
-          - echo "done"
-
+        - name: Build
+          commands:
+            - checkout
+            - ls -1
+            - echo $APP_ENV
+            - yarn build
+            - echo "done"
   # - name: "Smoke tests"
   #   task:
   #     jobs:
@@ -38,7 +36,6 @@ blocks:
   #       commands:
   #         - checkout
   #         - echo "make smoke"
-
   # - name: "Unit tests"
   #   task:
   #     jobs:
@@ -46,17 +43,14 @@ blocks:
   #       commands:
   #         - checkout
   #         - echo "make rspec"
-
   #     - name: Lint code
   #       commands:
   #         - checkout
   #         - echo "make lint"
-
   #     - name: Check security
   #       commands:
   #         - checkout
   #         - echo "make security"
-
   # - name: "Integration tests"
   #   task:
   #     jobs:
@@ -64,7 +58,6 @@ blocks:
   #       commands:
   #         - checkout
   #         - echo "make cucumber"
-
   # - name: "Push Image"
   #   task:
   #     jobs:
