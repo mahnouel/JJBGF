@@ -6,8 +6,11 @@ agent:
     os_image: ubuntu1804
 
 blocks:
-  - name: Install dependencies
+  - name: "Build"
     task:
+      env_vars:
+        - name: APP_ENV
+          value: prod
       jobs:
         - name: npm install and cache
           commands:
@@ -16,12 +19,6 @@ blocks:
             - yarn install
             - cache store node-modules-$SEMAPHORE_GIT_BRANCH-$(checksum yarn.lock) node_modules
 
-  - name: "Build"
-    task:
-      env_vars:
-        - name: APP_ENV
-          value: prod
-      jobs:
         - name: Build
           commands:
             - checkout
