@@ -1,64 +1,40 @@
+# .semaphore/semaphore.yml
 version: v1.0
-name: First pipeline example
+name: "Deploy website"
 agent:
   machine:
     type: e1-standard-2
     os_image: ubuntu1804
 
 blocks:
-  - name: "Build"
+  - name: "Install dependencies"
     task:
-      env_vars:
-        - name: APP_ENV
-          value: prod
       jobs:
-        - name: npm install and cache
+        - name: npm install
           commands:
             - checkout
-            - cache restore node-modules-$SEMAPHORE_GIT_BRANCH-$(checksum yarn.lock),node-modules-$SEMAPHORE_GIT_BRANCH,node-modules-master
+            # Reuse dependencies from cache and avoid installing them from scratch:
+            - cache restore node-modules-$(checksum yarn.lock)
             - yarn install
-            - cache store node-modules-$SEMAPHORE_GIT_BRANCH-$(checksum yarn.lock) node_modules
+            - cache store node-modules-$(checksum yarn.lock) node_modules
 
+  - name: "Build site"
+    task:
+      jobs:
         - name: Build
           commands:
             - checkout
-            - ls -1
-            - echo $APP_ENV
+            - cache restore node-modules-$(checksum yarn.lock)
+            # Replace this with command(s) that build your website:
             - yarn build
-            - echo "done"
-  # - name: "Smoke tests"
-  #   task:
-  #     jobs:
-  #     - name: Smoke
-  #       commands:
-  #         - checkout
-  #         - echo "make smoke"
-  # - name: "Unit tests"
-  #   task:
-  #     jobs:
-  #     - name: RSpec
-  #       commands:
-  #         - checkout
-  #         - echo "make rspec"
-  #     - name: Lint code
-  #       commands:
-  #         - checkout
-  #         - echo "make lint"
-  #     - name: Check security
-  #       commands:
-  #         - checkout
-  #         - echo "make security"
-  # - name: "Integration tests"
-  #   task:
-  #     jobs:
-  #     - name: Cucumber
-  #       commands:
-  #         - checkout
-  #         - echo "make cucumber"
-  # - name: "Push Image"
-  #   task:
-  #     jobs:
-  #     - name: Push
-  #       commands:
-  #         - checkout
-  #         - echo "make docker.push"
+            # The script puts website files in directory `public`,
+            # store it in cache to propagate to deployment:
+            - cache store website-build dist
+
+promotions:
+  - name: Production deploy
+    pipeline_file: production-deploy.yml
+    auto_promote_on:
+      - result: passed
+        branch:
+          - master
