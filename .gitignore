@@ -20,6 +20,7 @@ yarn-error.log*
 *.sln
 *.sw*
 
+jjbgf-secrets.yml
 
 # for reference
 theme-default

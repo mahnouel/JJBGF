@@ -8,15 +8,15 @@ agent:
 blocks:
   - name: Deploy
     task:
-      # secrets:
-      #   - name: aws-website
+      secrets:
+        - name: jjbgf-secrets
       jobs:
         - name: Copy to Server
           commands:
             - checkout
             - cache restore website-build
             - lftp --help
-            # - lftp -c "open -u $FTP_USER,$FTP_PASSWORD YOUR_FTP_HOST; set ssl:verify-certificate no; mirror -R ./ YOUR_REMOTE_PATH"
+            - lftp -c "open -u $FTP_USER, $FTP_PASSWORD $FTP_HOST; set ssl:verify-certificate no; mirror -R ./ master/"
           # - name: Copy to S3
           #   commands:
           #     - checkout
