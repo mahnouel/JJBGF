@@ -1,13 +1,13 @@
 # .semaphore/semaphore.yml
 version: v1.0
-name: "Deploy website"
+name: Build Website
 agent:
   machine:
     type: e1-standard-2
     os_image: ubuntu1804
 
 blocks:
-  - name: "Install dependencies"
+  - name: Install Dependencies
     task:
       jobs:
         - name: npm install
@@ -18,24 +18,21 @@ blocks:
             - yarn install
             - cache store node-modules-$(checksum yarn.lock) node_modules
 
-  - name: "Build site"
+  - name: Build
     task:
       jobs:
         - name: Build
           commands:
             - checkout
             - cache restore node-modules-$(checksum yarn.lock)
-            # Replace this with command(s) that build your website:
             - yarn build
-            # The script puts website files in directory `public`,
-            # store it in cache to propagate to deployment:
             - cache delete website-build
             - cache store website-build dist/
 
 promotions:
-  - name: Production deploy
+  - name: Deploy
     pipeline_file: production-deploy.yml
     auto_promote_on:
       - result: passed
         branch:
-          - master
+          - ^master$

@@ -1,17 +1,17 @@
 # .semaphore/production-deploy.yml
 version: v1.0
-name: Deploy website
+name: Deploy Website
 agent:
   machine:
     type: e1-standard-2
     os_image: ubuntu1804
 blocks:
-  - name: Deploy
+  - name: Upload
     task:
       secrets:
         - name: jjbgf-secrets
       jobs:
-        - name: Copy to Server
+        - name: Upload to JJBGF.de
           commands:
             - cache restore website-build
             - ls -l
