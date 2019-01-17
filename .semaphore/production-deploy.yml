@@ -16,7 +16,7 @@ blocks:
             - checkout
             - cache restore website-build
             - lftp --help
-            - lftp -c "open -u $FTP_USER,$FTP_PASSWORD $FTP_HOST; set ssl:verify-certificate no; mirror -R ./ master/"
+            - lftp -u $FTP_USER,$FTP_PASSWORD $FTP_HOST -c "set ssl:verify-certificate no; mirror -R ./ master/"
           # - name: Copy to S3
           #   commands:
           #     - checkout
