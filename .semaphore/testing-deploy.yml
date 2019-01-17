@@ -1,0 +1,18 @@
+# .semaphore/production-deploy.yml
+version: v1.0
+name: Deploy Website
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+blocks:
+  - name: Upload
+    task:
+      secrets:
+        - name: jjbgf-secrets
+      jobs:
+        - name: Upload to JJBGF.de
+          commands:
+            - cache restore website-build
+            - cd dist/
+            - lftp -c "open -u $FTP_USER,$FTP_PASSWORD ftp.jjbgf.de; set ssl:verify-certificate no; mirror -R ./ $SEMAPHORE_GIT_BRANCH/"
