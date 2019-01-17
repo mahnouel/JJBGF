@@ -22,8 +22,8 @@ jugend@johannische-kirche.org
 ::: adress
 **Träger der Johannischen Jugend ist das Johannische Sozialwerk e.V.** <br>
 Vertretungsberechtigter Vorstand <br>
-Josephine Müller, Bodo Elsner, Otto-Ewald Marek, Joachim Steffen 
-
+Josephine Müller, Bodo Elsner, Otto-Ewald Marek, Joachim Steffen <br>
+<br>
 Aufsichtsbehörde <br>
 Berliner Beauftragte für
 Datenschutz und Informationsfreiheit <br>
