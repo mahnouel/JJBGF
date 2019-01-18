@@ -1,10 +1,12 @@
 ---
 title: Frühlingsseminar
-navtitle: 🦆 Seminar
+navtitle: 🌻 Seminar
 theme: maroon
 featured: true
 permalink: /:year/seminare/fruehling/
-date: 15 Mar 2019
+date: 2019-03-15
+
+excerpt: "Im Frühling geht's in den Süden. Zum wunderschönen Heidelberg. 🌄😊"
 
 header:
   date: true
@@ -21,6 +23,6 @@ signup:
 
 :::
 
-Im Frühling gehts in den Süden. Für 15 Leute gibt es dieses Jahr die einmalige Gelegenheit,
+Im Frühling geht's in den Süden. Für 15 Leute gibt es dieses Jahr die einmalige Gelegenheit,
 Mitte März im baden-würtembergischen Heidelberg, in einer wunderschönen und lebenswerten
 Stadt am Frühlingsseminar teilzunehmen. Wir werden uns dabei selbst in einem Hostel bekochen und versorgen. Spaß ist vorprogrammiert. Bleibe dran und meld dich an.
