@@ -43,7 +43,7 @@
   transition: box-shadow 0.5s, color 0.5s, background-color 0.5s,
     border-color 0.5s;
 
-  margin-right: 1rem;
+  margin-right: 0.5rem;
   color: black;
   background-color: #ffdc00;
   box-shadow: 3px 3px 0px #ff851b, 6px 6px 0px #ff4136;

@@ -16,13 +16,6 @@
       </p>
     </article>
     <page-footer/>
-    <!-- <pre>
-      {{$site}}
-    </pre>
-    <pre>
-      {{$site.pages}}
-    </pre>-->
   </div>
 </template>
 
-<style src="./styles/theme.styl" lang="stylus"></style>

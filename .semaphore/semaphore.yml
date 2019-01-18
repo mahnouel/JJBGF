@@ -20,6 +20,9 @@ blocks:
 
   - name: Build
     task:
+      env_vars:
+        - name: NODE_ENV
+          value: production
       jobs:
         - name: Build
           commands:

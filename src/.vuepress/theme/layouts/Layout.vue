@@ -17,6 +17,7 @@
         target="_blank"
         v-if="signup"
       >{{signup.text}}</wonder-button>
+      <small v-if="signup && signup.annotation">{{signup.annotation}}</small>
     </article>
     <page-footer/>
   </div>
@@ -53,5 +54,3 @@ export default {
   }
 };
 </script>
-
-<style src="./styles/theme.styl" lang="stylus"></style>

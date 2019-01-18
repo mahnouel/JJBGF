@@ -3,7 +3,9 @@ title: Weihnachtsseminar
 navtitle: 🎅 Seminar
 theme: maroon
 permalink: /:year/seminare/weihnachten/
-date: 27 Dec 2018
+date: 2018-12-27
+
+excerpt: "Keine Angst, es geht darum Ängste zu nehmen."
 
 header:
   date: true
