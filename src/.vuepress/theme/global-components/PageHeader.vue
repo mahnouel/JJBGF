@@ -22,6 +22,10 @@
   margin-bottom: 2rem;
   padding-bottom: 1rem;
   border-bottom: 0.2rem solid;
+
+  .button {
+    margin-right: 0.5rem;
+  }
 }
 
 .page-header__title {

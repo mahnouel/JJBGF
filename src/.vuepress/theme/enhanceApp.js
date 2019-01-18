@@ -6,5 +6,5 @@ export default ({
   siteData, // site metadata
 }) => {
   // redirect index to first page
-  router.addRoutes([{ path: '/', redirect: siteData.pages[0].path }]);
+  // router.addRoutes([{ path: '/', redirect: siteData.pages[0].path }]);
 };
