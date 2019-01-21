@@ -1,0 +1,78 @@
+---
+label: Seminar
+hide_body: 
+is_partial: 
+fields:
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: ''
+- name: theme
+  label: Theme
+  type: text
+  hidden: false
+  default: ''
+- name: navtitle
+  label: Navtitle
+  type: text
+  hidden: false
+  default: ''
+- name: permalink
+  label: Permalink
+  type: text
+  hidden: false
+  default: ''
+- name: date
+  label: Date
+  type: datetime
+  hidden: false
+  default: ''
+- name: excerpt
+  label: Excerpt
+  type: text
+  hidden: false
+  default: ''
+- name: header
+  label: Header
+  type: field_group
+  fields:
+  - name: date
+    label: Date
+    type: boolean
+    hidden: false
+    default: ''
+  - name: location
+    label: Location
+    type: field_group
+    fields:
+    - name: name
+      label: Name
+      type: text
+      hidden: false
+      default: ''
+    - name: link
+      label: Link
+      type: textarea
+      hidden: false
+      default: ''
+    hidden: false
+    default: ''
+  hidden: false
+  default: ''
+- name: signup
+  label: Signup
+  type: field_group
+  fields:
+  - name: autohide
+    label: Autohide
+    type: boolean
+    hidden: false
+    default: ''
+  - name: annotation
+    label: Annotation
+    type: text
+    hidden: false
+    default: ''
+  hidden: false
+  default: ''
