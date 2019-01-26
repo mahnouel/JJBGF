@@ -17,4 +17,4 @@ blocks:
             - ls -l
             - lftp --help
             - cd dist/
-            - lftp -c "open -u $FTP_USER,$FTP_PASSWORD ftp.jjbgf.de; set ssl:verify-certificate no; mirror -R ./ master/"
+            - lftp -c "open -u $FTP_USER,$FTP_PASSWORD ftp.jjbgf.de; set ssl:verify-certificate no; mirror -R ./ ./"
