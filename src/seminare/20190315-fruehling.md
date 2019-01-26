@@ -1,7 +1,7 @@
 ---
 title: Frühlingsseminar
 navtitle: 🌻 Seminar
-theme: maroon
+theme: spring
 featured: true
 permalink: /:year/seminare/fruehling/
 date: 2019-03-15
@@ -19,7 +19,7 @@ signup:
 
 ::: slot head
 
-# Frühlings&shy;seminar
+# :sunflower: Frühlings&shy;seminar
 
 :::
 
