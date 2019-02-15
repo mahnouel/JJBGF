@@ -85,6 +85,7 @@ exports.extendMarkdown = md => {
   modifyRenderer(md);
 
   // use more markdown-it plugins!
+  md.use(require('markdown-it-footnote'));
   md.use(require('markdown-it-mark'));
   md.use(require('markdown-it-container'), 'header', {
     validate: function(params) {

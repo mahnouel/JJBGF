@@ -1,6 +1,16 @@
 <template>
   <footer class="footer" v-if="this.$route.name !== 'links'">
     <section class="linkblock text">
+      <p>
+        <wonder-button
+          :to="page.path"
+          v-for="page in $site.pages"
+          v-if="page.path.indexOf('zeltlager') >= 0"
+          :key="page.key"
+          type="small"
+          class="block"
+        >{{page.frontmatter.navtitle}}</wonder-button>
+      </p>
       <h4>Seminare</h4>
       <p>
         <wonder-button
@@ -37,6 +47,8 @@
         <wonder-link
           href="//cloud.johannische-kirche.org/index.php/s/NjIqFZcWUL2EMF2?path=%2FAnmeldungen#"
         >Anmeldungen</wonder-link>
+        <br>🆕
+        <wonder-link href="//www.instagram.com/jjbgf.de">Instagram</wonder-link>
         <br>
         <wonder-link href="//www.facebook.com/jjbgf">Facebook</wonder-link>
       </p>
