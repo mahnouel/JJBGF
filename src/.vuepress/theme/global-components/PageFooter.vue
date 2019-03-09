@@ -31,12 +31,20 @@
         >Jugend</wonder-link>
         <br>
         <wonder-link
-          href="//calendar.google.com/calendar/embed?src=c009ps9dpfhds19bjapr6lvte0%40group.calendar.google.com&ctz=Europe%2FBerlin"
-        >Chor</wonder-link>
-        <br>
-        <wonder-link
           href="//calendar.google.com/calendar/embed?src=41cva8imqg9f443kn41dul8onc%40group.calendar.google.com&ctz=Europe%2FBerlin"
         >SMH</wonder-link>
+        <br>
+        <wonder-link
+          href="//calendar.google.com/calendar/embed?src=90k02p9ir853ts5ks5hanilpfg%40group.calendar.google.com&ctz=Europe%2FBerlin"
+        >Velten</wonder-link>
+        <br>
+        <wonder-link
+          href="//calendar.google.com/calendar/embed?src=2ma7gn9d8sa5j6ekin4pkhnm4k%40group.calendar.google.com&ctz=Europe%2FBerlin"
+        >Urgemeinde</wonder-link>
+        <br>
+        <wonder-link
+          href="//calendar.google.com/calendar/embed?src=c009ps9dpfhds19bjapr6lvte0%40group.calendar.google.com&ctz=Europe%2FBerlin"
+        >Chor</wonder-link>
       </p>
     </section>
     <section class="linkblock text">
