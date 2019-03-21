@@ -2,7 +2,6 @@
 title: Frühlingsseminar
 navtitle: 🌻 Seminar
 theme: spring
-featured: true
 permalink: /:year/seminare/fruehling/
 date: 2019-03-15
 
