@@ -1,57 +1,27 @@
 <template>
   <div>
     <page-header/>
-    <article class="mb-2 text">
-      <router-link
-        :to="page.path"
-        :key="page.key"
-        v-for="page in $site.pages"
-        v-if="page.frontmatter.featured"
-        class="excerpt"
-      >
-        <article class="text">
-          <h2>{{page.frontmatter.title}}</h2>
-          <p>{{page.frontmatter.excerpt}}</p>
-          <wonder-time class="excerpt__time" :date="page.frontmatter.date"/>
-        </article>
-      </router-link>
+    <article class="text width">
       <Content class="text"/>
+      <event-teaser v-for="page in events" :key="page.key" :page="page"/>
     </article>
     <page-footer/>
   </div>
 </template>
-<style lang="stylus">
-.excerpt {
-  background-color: #ddd;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  display: block;
-  margin-bottom: 2rem;
-  text-decoration: none;
-  color: inherit;
 
-  &:hover {
-    background-color: lighten(#ddd, 50%);
+<script>
+import { ByDate, EventPages } from "../utils";
 
-    .excerpt__time {
-      background-color: lighten(#eee, 50%);
+export default {
+  computed: {
+    events() {
+      return EventPages(this.$site)
+        .filter(page => page.frontmatter.featured)
+        .sort(ByDate("ASC"));
     }
   }
+};
+</script>
 
-  h2 {
-    margin-top: 0;
-  }
 
-  .excerpt__time {
-    background-color: #eee;
-    color: #000;
-    font-size: 1rem;
-  }
-
-  .excerpt__more {
-    display: inline-block;
-    float: right;
-  }
-}
-</style>
 

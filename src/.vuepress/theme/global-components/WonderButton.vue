@@ -25,12 +25,11 @@
   --button-color: #000;
   border: 0.2em solid #ddd;
   margin-right: 0.2em;
-  margin-bottom: 0.5rem;
   display: inline-block;
   background-color: var(--button-background);
-  padding: 0.3em;
+  padding: 0.15em 0.5em;
   color: var(--button-color);
-  border-radius: 0.5em;
+  border-radius: 0.5rem;
   font-weight: bold;
   text-decoration: none;
 }
@@ -44,14 +43,13 @@
     border-color 0.5s;
 
   margin-right: 0.5rem;
-  color: black;
+  color: inherit;
   background-color: #ffdc00;
   box-shadow: 3px 3px 0px #ff851b, 6px 6px 0px #ff4136;
   border-color: #ffdc00;
   &:hover {
-    border-color: #111;
-    background-color: #111;
-    color: white;
+    border-color: lightblue;
+    background-color: lightblue;
     box-shadow: none;
     opacity: 1;
   }

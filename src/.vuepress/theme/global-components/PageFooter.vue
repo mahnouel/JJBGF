@@ -1,83 +1,75 @@
 <template>
-  <footer class="footer" v-if="this.$route.name !== 'links'">
-    <section class="linkblock text">
-      <p>
-        <wonder-button
-          :to="page.path"
-          v-for="page in $site.pages"
-          v-if="page.path.indexOf('zeltlager') >= 0"
-          :key="page.key"
-          type="small"
-          class="block"
-        >{{page.frontmatter.navtitle}}</wonder-button>
-      </p>
-      <h4>Seminare</h4>
-      <p>
-        <wonder-button
-          :to="page.path"
-          v-for="page in $site.pages"
-          v-if="page.path.indexOf('seminar') >= 0"
-          :key="page.key"
-          type="small"
-          class="block"
-        >{{page.frontmatter.navtitle}}</wonder-button>
-      </p>
-    </section>
-    <section class="linkblock text">
-      <h4>Kalender</h4>
-      <p>
-        <wonder-link
-          href="//calendar.google.com/calendar/embed?src=jugend%40johannische-kirche.org&ctz=Europe%2FBerlins"
-        >Jugend</wonder-link>
-        <br>
-        <wonder-link
-          href="//calendar.google.com/calendar/embed?src=41cva8imqg9f443kn41dul8onc%40group.calendar.google.com&ctz=Europe%2FBerlin"
-        >SMH</wonder-link>
-        <br>
-        <wonder-link
-          href="//calendar.google.com/calendar/embed?src=90k02p9ir853ts5ks5hanilpfg%40group.calendar.google.com&ctz=Europe%2FBerlin"
-        >Velten</wonder-link>
-        <br>
-        <wonder-link
-          href="//calendar.google.com/calendar/embed?src=2ma7gn9d8sa5j6ekin4pkhnm4k%40group.calendar.google.com&ctz=Europe%2FBerlin"
-        >Urgemeinde</wonder-link>
-        <br>
-        <wonder-link
-          href="//calendar.google.com/calendar/embed?src=c009ps9dpfhds19bjapr6lvte0%40group.calendar.google.com&ctz=Europe%2FBerlin"
-        >Chor</wonder-link>
-      </p>
-    </section>
-    <section class="linkblock text">
-      <h4>Mehr</h4>
-      <p>
-        <wonder-button to="/impressum/" type="small">Impressum</wonder-button>
-        <br>
-        <wonder-link
-          href="//cloud.johannische-kirche.org/index.php/s/NjIqFZcWUL2EMF2?path=%2FAnmeldungen#"
-        >Anmeldungen</wonder-link>
-        <br>🆕
-        <wonder-link href="//www.instagram.com/jjbgf.de">Instagram</wonder-link>
-        <br>
-        <wonder-link href="//www.facebook.com/jjbgf">Facebook</wonder-link>
-      </p>
-    </section>
+  <footer class="page-footer">
+    <div class="page-footer__content width">
+      <section class="page-footer__column text">
+        <h4>Highlights</h4>
+        <p>
+          <router-link
+            :to="page.path"
+            v-for="page in events"
+            :key="page.key"
+            class="button"
+          >{{page.frontmatter.navtitle}}</router-link>
+          <router-link to="/events/" class="button">📅 Events</router-link>
+        </p>
+      </section>
+      <section class="page-footer__column text">
+        <h4>Kalender</h4>
+        <p>
+          <a
+            target="_blank"
+            href="//calendar.google.com/calendar/embed?src=jugend%40johannische-kirche.org&ctz=Europe%2FBerlins"
+          >Jugend</a>
+          <br>
+          <a
+            target="_blank"
+            href="//calendar.google.com/calendar/embed?src=41cva8imqg9f443kn41dul8onc%40group.calendar.google.com&ctz=Europe%2FBerlin"
+          >SMH</a>
+          <br>
+          <a
+            target="_blank"
+            href="//calendar.google.com/calendar/embed?src=90k02p9ir853ts5ks5hanilpfg%40group.calendar.google.com&ctz=Europe%2FBerlin"
+          >Velten</a>
+          <br>
+          <a
+            target="_blank"
+            href="//calendar.google.com/calendar/embed?src=2ma7gn9d8sa5j6ekin4pkhnm4k%40group.calendar.google.com&ctz=Europe%2FBerlin"
+          >Urgemeinde</a>
+          <br>
+          <a
+            target="_blank"
+            href="//calendar.google.com/calendar/embed?src=c009ps9dpfhds19bjapr6lvte0%40group.calendar.google.com&ctz=Europe%2FBerlin"
+          >Chor</a>
+        </p>
+      </section>
+      <section class="page-footer__column text">
+        <h4>Mehr</h4>
+        <p>
+          <router-link to="/impressum/" class="button">Impressum</router-link>
+          <a
+            target="_blank"
+            href="//cloud.johannische-kirche.org/index.php/s/NjIqFZcWUL2EMF2?path=%2FAnmeldungen#"
+          >Anmeldungen</a>
+          <a target="_blank" href="//www.instagram.com/jjbgf.de">Instagram</a>
+          <a target="_blank" href="//www.facebook.com/jjbgf">Facebook</a>
+        </p>
+      </section>
+    </div>
   </footer>
 </template>
 
-<style lang="stylus">
-.linkblock {
-  display: inline-block;
-  vertical-align: top;
+<script>
+import { ByDate, EventPages } from "../utils";
 
-  &:not(:last-child) {
-    margin-right: 2rem;
+export default {
+  computed: {
+    events() {
+      return EventPages(this.$site)
+        .filter(page => page.frontmatter.featured)
+        .sort(ByDate("DESC"));
+    }
   }
-}
-
-.footer {
-  padding-top: 1rem;
-  border-top: 0.2rem solid;
-}
-</style>
+};
+</script>
 
 

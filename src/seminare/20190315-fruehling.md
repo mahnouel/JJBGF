@@ -1,19 +1,20 @@
 ---
 title: Frühlingsseminar
 navtitle: 🌻 Seminar
-theme: spring
+layout: EventPage
 permalink: /:year/seminare/fruehling/
+
 date: 2019-03-15
+date_end: 2019-03-17
 
 excerpt: "Im Frühling geht's in den Süden. Zum wunderschönen Heidelberg. 🌄😊"
 
-header:
-  date: true
-  location:
-    name: Grumbach
-    link: https://goo.gl/maps/vMF34SpHcrr
+location:
+  name: Grumbach
+  link: https://goo.gl/maps/vMF34SpHcrr
+
 signup:
-  autohide: true
+  deadline: 2019-02-01
 ---
 
 ::: slot head

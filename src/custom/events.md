@@ -1,0 +1,4 @@
+---
+layout: Events
+permalink: /:slug/
+---

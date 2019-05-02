@@ -1,6 +1,5 @@
 ---
 title: Impressum
-theme: header--without-padding
 permalink: /:slug/
 ---
 
@@ -36,6 +35,7 @@ Telefax: 030 2155050 <br>
 mailbox@datenschutz-berlin.de <br>
 
 ### Bankverbindung
+
 ::: adress
 **Johannisches Sozialwerk e.V.** <br>
 Bank für Sozialwirtschaft <br>

@@ -1,28 +1,47 @@
-@import url("https://rsms.me/inter/inter-ui.css");
-@import 'color';
+/** Font **/
+@import url("/fonts/inter/inter.css");
+
+/** ITCSS 
+ * inspired by: https://www.hongkiat.com/blog/inverted-triangle-css-web-development/ */
+
+/** Settings
+  * Preprocessor variables and methods (no actual CSS output) */
+@import '1-settings/color';
+
+/** Tools 
+  * Mixins and functions (no actual CSS output) */
+
+/** Generic
+  * CSS resets which might include Eric Meyer’s reset, Normalize.css, or your own batch of code */
+@import '3-generic/generic.normalize'
+@import '3-generic/generic.box-sizing'
+
+/** Elements 
+  * Single HTML element selectors without classes */
+@import '4-elements/element.layout';
+
+/** Objects
+  * Classes for page structure typically following the OOCSS methodology */
+@import '5-objects/object.link';
+@import '5-objects/object.text';
+@import '5-objects/object.width';
+
+/** Components 
+  * Aesthetic classes for styling any & all page elements (often combined with the structure of object classes) */
+@import '6-components/component.header';
+@import '6-components/component.page-header';
+@import '6-components/component.page-footer';
+@import '6-components/component.event-teaser';
+@import '6-components/component.quote';
+@import '6-components/component.button';
+
+/** Utilities
+  * The most specific styles for overriding anything else in the triangle */
+@import '7-utilities/util.visually-hidden';
+@import '7-utilities/util.clickable';
 
 
-body,
-html 
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: calc(16px + 100vw / 100);
-  line-height: 1.25;
-  margin: 0;
-  padding: 0;
-  font-family: "Inter UI", sans-serif;
-@media (min-width: 768px) 
-  body,
-  html 
-    font-size: 24px;
-body 
-  max-width: 28rem;
-  margin: auto;
-  padding: 1rem;
-.text 
-  --flow-space: 1rem;
-.text > * 
-  margin-bottom: var(--flow-space);
+
 .highlight,
 mark 
   background-color: #111111;
@@ -34,13 +53,11 @@ mark
 p 
   margin: 0;
 .text h1 
-  line-height: 0.8;
+  line-height: ;
 
   // text-align: center;
   // font-family: serif;
   margin: 0;
-  margin-bottom: 1rem;
-  margin-top: 0.2em;
   font-size: 2rem;
   @media (min-width: 768px) 
     font-size: 2.5rem;
@@ -58,82 +75,8 @@ h4
   margin-bottom: 2rem;
   width: 100%;
 
-
 .media 
   padding-left: 2rem;
   vertical-align: top;
   width: calc(100% - 2rem);
   margin-bottom: 2rem;
-
-.relative 
-  position: relative;
-
-
-.p-1 
-  padding: 1rem;
-
-
-.mb-1 
-  margin-bottom: 1rem;
-.mb-2
-  margin-bottom: 2rem;
-.mb-3 
-  margin-bottom: 3rem;
-
-
-.flex 
-  display: flex;
-
-
-.flex-2 
-  flex: 2;
-
-
-.flex-1 
-  flex: 1;
-
-
-.flex-wrap 
-  flex-wrap: wrap;
-
-
-.flex-basis-320px 
-  flex-basis: 320px;
-
-.center
-  text-align:center;
-.faded 
-  opacity: 0.5;
-
-.block 
-  display: block !important;
-
-/* HEADER THEMES */
-
-
-
-
-.aqua 
-  background-color: COLOR.aqua;
-  .highlight 
-    color: inherit;
-    background-color: rgba(255, 255, 255, 0.4) !important;
-.maroon 
-  background-color: COLOR.maroon;
-  color: white;
-.winter 
-  background-color: lightblue;
-  .highlight
-    background-color: rgba(255, 255, 255, 0.2) !important;
-.spring 
-  background-color: #cec19b;
-  .highlight
-    background-color: rgba(255, 255, 255, 0.2) !important;
-.camp 
-  background-color: #1e5090;
-  color: white;
-.easter 
-  background-color: #39CCCC;
-  color: black;
-  .highlight
-    background-color: rgba(255, 255, 255, 0.2) !important;

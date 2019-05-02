@@ -3,7 +3,11 @@ const extendMarkdown = require('./markdown.js').extendMarkdown;
 console.log(process.env.NODE_ENV);
 module.exports = {
   base:
-    process.env.SEMAPHORE_GIT_BRANCH !== 'master' ? `/${process.env.SEMAPHORE_GIT_BRANCH}/` : '',
+    process.env.SEMAPHORE_GIT_BRANCH !== 'master'
+      ? process.env.SEMAPHORE_GIT_BRANCH
+        ? `/${process.env.SEMAPHORE_GIT_BRANCH}/`
+        : ''
+      : '',
   themeConfig: {
     // nav: [
     //   { text: 'Home', link: '/bla' },

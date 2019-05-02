@@ -1,17 +1,17 @@
 ---
 title: Weihnachtsseminar
 navtitle: 🎅 Seminar
-theme: maroon
+layout: EventPage
 permalink: /:year/seminare/weihnachten/
+
 date: 2018-12-27
 
 excerpt: "Keine Angst, es geht darum Ängste zu nehmen."
 
-header:
-  date: true
-  location:
-    name: SMH
-    link: https://goo.gl/maps/HSPggzc9Bov
+location:
+  name: SMH
+  link: https://goo.gl/maps/HSPggzc9Bov
+
 signup:
   autohide: true
 ---

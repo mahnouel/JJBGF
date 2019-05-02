@@ -1,0 +1,83 @@
+.teaser {
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 1rem;
+  display: block;
+  background-color: #eee;
+  border-radius: 0.5rem;
+}
+
+.teaser__date, .teaser__button {
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.05em 0.5em;
+  border-radius: 1em;
+}
+
+.teaser__button-container {
+  text-align: right;
+  margin-bottom: 0;
+}
+
+.teaser__button {
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.05em 0.5em;
+  border-radius: 0.5rem;
+  display: inline;
+  margin-left: 0.1rem;
+}
+
+.teaser__date {
+  background-color: lightblue;
+}
+
+.teaser--is-history .teaser__date {
+  background-color: #ddd;
+}
+
+.teaser--is-atm .teaser__date {
+  background-color: lightgreen;
+}
+
+.teaser__deadline {
+  font-weight: bold;
+}
+
+.teaser__deadline.teaser__deadline--is-soon {
+  padding: 0rem 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #F9BEBE;
+}
+
+.teaser__button {
+  color: inherit;
+  text-decoration: none;
+  background-color: #ccc;
+}
+
+.teaser__info {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-left: 1rem;
+}
+
+.teaser__card {
+  background-color: #ddd;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: block;
+
+  h2 {
+    margin-top: 0;
+  }
+
+  > p:last-child {
+    margin-bottom: 0;
+  }
+
+  .teaser__more {
+    display: inline-block;
+    float: right;
+  }
+}
