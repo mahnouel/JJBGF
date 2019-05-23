@@ -12,6 +12,7 @@
     "register-service-worker": "^1.0.0",
     "vue": "^2.5.22",
     "vue-router": "^3.0.1",
+    "vuepress": "^1.0.0-alpha.48",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
@@ -30,8 +31,7 @@
     "markdown-it-mark": "^2.0.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
-    "vue-template-compiler": "^2.5.17",
-    "vuepress": "^1.0.0-alpha.48"
+    "vue-template-compiler": "^2.5.17"
   },
   "browserslist": [
     "> 1%",
