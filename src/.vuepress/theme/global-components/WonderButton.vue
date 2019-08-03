@@ -8,52 +8,7 @@
 </template>
 
 <style lang="scss">
-.button.button--small {
-  border: 0.2em solid #ccc;
-  background-color: #ccc;
-  color: #000;
-  padding: 0.15em 0.5em;
-}
-.button.router-link-exact-active {
-  border-color: #aaa;
-}
 
-.button {
-  --button-background: #39cccc;
-  --button-color: #fff;
-  --button-background: #ddd;
-  --button-color: #000;
-  border: 0.2em solid #ddd;
-  margin-right: 0.2em;
-  display: inline-block;
-  background-color: var(--button-background);
-  padding: 0.15em 0.5em;
-  color: var(--button-color);
-  border-radius: 0.5rem;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.button:hover {
-  opacity: 0.5;
-}
-
-.button.button--primary {
-  transition: box-shadow 0.5s, color 0.5s, background-color 0.5s,
-    border-color 0.5s;
-
-  margin-right: 0.5rem;
-  color: inherit;
-  background-color: #ffdc00;
-  box-shadow: 3px 3px 0px #ff851b, 6px 6px 0px #ff4136;
-  border-color: #ffdc00;
-  &:hover {
-    border-color: lightblue;
-    background-color: lightblue;
-    box-shadow: none;
-    opacity: 1;
-  }
-}
 </style>
 
 <script>

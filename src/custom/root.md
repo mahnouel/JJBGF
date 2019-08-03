@@ -1,5 +1,5 @@
 ---
-title: JJBGF
+title: Johannische Jugend
 layout: Home
 permalink: /
 ---
