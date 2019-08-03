@@ -1,5 +1,5 @@
 ---
-title: Winterseminar
+title: JJBGF
 layout: Home
 permalink: /
 ---
