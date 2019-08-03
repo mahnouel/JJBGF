@@ -1,5 +1,5 @@
 ---
-title: Johannische Jugend
+title: Übersicht
 layout: Home
 permalink: /
 ---

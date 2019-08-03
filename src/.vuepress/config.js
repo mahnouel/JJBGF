@@ -2,6 +2,8 @@
 const extendMarkdown = require('./markdown.js').extendMarkdown;
 console.log(process.env.NODE_ENV);
 module.exports = {
+  title: 'Johannische Jugend',
+  description: 'Die Website der Johannischen Jugend',
   base:
     process.env.SEMAPHORE_GIT_BRANCH !== 'master'
       ? process.env.SEMAPHORE_GIT_BRANCH
