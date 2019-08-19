@@ -1,6 +1,6 @@
 import moment from 'moment';
 
-import VueApollo from 'vue-apollo';
+// import VueApollo from 'vue-apollo';
 
 export default ({
   Vue, // the version of Vue being used in the VuePress app
@@ -9,7 +9,7 @@ export default ({
   siteData, // site metadata
 }) => {
   // Vue.apolloProvider
-  Vue.use(VueApollo);
+  // Vue.use(VueApollo);
 
   // redirect index to first page
   // router.addRoutes([{ path: '/', redirect: siteData.pages[0].path }]);

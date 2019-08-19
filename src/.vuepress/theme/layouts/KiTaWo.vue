@@ -60,12 +60,12 @@
 <script>
 import { ByDate, EventPages, OnlyYear } from "../utils";
 import { ApolloClient } from "apollo-boost";
-import { HttpLink } from "apollo-link-http";
-import { InMemoryCache } from "apollo-cache-inmemory";
-import fetch from "node-fetch";
 import { createHttpLink } from "apollo-link-http";
+import { InMemoryCache } from "apollo-cache-inmemory";
+// import fetch from "node-fetch";
+// import { createHttpLink } from "apollo-link-http";
 
-import VueApollo from "vue-apollo";
+// import VueApollo from "vue-apollo";
 
 const httpLink = createHttpLink({
   fetch,
@@ -73,30 +73,35 @@ const httpLink = createHttpLink({
 });
 
 // Create the apollo client
-const apolloClient = new ApolloClient({
-  link: httpLink,
-  cache: new InMemoryCache(),
-  connectToDevTools: true
-});
 
-const apolloProvider = new VueApollo({
-  defaultClient: apolloClient
-});
+// const apolloProvider = new VueApollo({
+//   defaultClient: apolloClient
+// });
 
 import gql from "graphql-tag";
 import moment from "moment";
 moment.locale("de");
 
+const apolloClient = new ApolloClient({
+  link: httpLink,
+  cache: new InMemoryCache(),
+  connectToDevTools: true,
+  defaultOptions: {
+    watchQuery: {
+      fetchPolicy: "cache-and-network"
+    }
+  }
+});
+
 export default {
-  apolloProvider,
   data() {
     return {
       rooms: []
     };
   },
-  apollo: {
-    // Simple query that will update the 'hello' vue property
-    rooms: {
+
+  mounted() {
+    const observable = apolloClient.watchQuery({
       query: gql`
         {
           rooms {
@@ -106,8 +111,14 @@ export default {
           }
         }
       `,
-      pollInterval: 10500 // ms
-    }
+      pollInterval: 1000
+    });
+
+    observable.subscribe({
+      next: ({ data }) => {
+        this.rooms = data.rooms;
+      }
+    });
   },
   computed: {
     data() {
