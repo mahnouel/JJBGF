@@ -1,14 +1,18 @@
 <template>
   <div>
-    <page-header/>
-    <article class="text width">
-      <Content class="text"/>
+    <page-header />
+    <article class="text padding">
+      <Content class="text" />
       <section v-for="year in eventYears">
-        <h2>{{year}}</h2>
-        <event-teaser v-for="page in eventsForYear(year)" :key="page.key" :page="page"/>
+        <header>
+          <h2>{{year}}</h2>
+        </header>
+        <div class="teaser-container">
+          <teaser-event v-for="page in eventsForYear(year)" :key="page.key" :page="page" />
+        </div>
       </section>
     </article>
-    <page-footer/>
+    <page-footer />
   </div>
 </template>
 <script>

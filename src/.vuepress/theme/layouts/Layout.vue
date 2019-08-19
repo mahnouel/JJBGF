@@ -1,13 +1,13 @@
 <template>
   <div>
-    <page-header/>
-    <article class="text width">
+    <page-header />
+    <article class="text container">
       <header class="header">
-        <Content slot-key="head"/>
+        <Content slot-key="head" />
       </header>
 
-      <Content class="text"/>
+      <Content class="text" />
     </article>
-    <page-footer/>
+    <page-footer />
   </div>
 </template>

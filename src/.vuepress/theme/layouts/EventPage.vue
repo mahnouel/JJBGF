@@ -1,9 +1,9 @@
 <template>
   <div>
-    <page-header/>
-    <article class="text width">
+    <page-header />
+    <article class="text container">
       <header class="header">
-        <Content slot-key="head"/>
+        <Content slot-key="head" />
       </header>
       <div class="info">
         <p v-if="$page.frontmatter.location" title="Wo?">
@@ -34,7 +34,7 @@
         </p>
       </div>
 
-      <Content class="text"/>
+      <Content class="text" />
 
       <div
         v-if="signup && !isHistory && !isATM"
@@ -52,7 +52,7 @@
         <p>
           Diese Veranstaltung hat begonnen. 👏
           <span v-if="$page.frontmatter.location">
-            <br>
+            <br />
             <strong>Anfahrt:</strong> 📍
             <a
               class="location"
@@ -69,7 +69,7 @@
         <router-link class="button" to="/events/">📅 Übersicht</router-link>
       </div>
     </article>
-    <page-footer/>
+    <page-footer />
   </div>
 </template>
 

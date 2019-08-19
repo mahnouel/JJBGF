@@ -1,0 +1,21 @@
+
+.teaser-container
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    .teaser-event, .teaser-kitawo
+        width: 100%;
+
+@media (min-width: 625px)
+    .teaser-container .teaser-kitawo,
+    .teaser-container .teaser-event
+        width: calc(100% / 2 - 0.5rem);
+
+@media (min-width: 968px)
+    .teaser-container .teaser-kitawo,
+    .teaser-container .teaser-event
+        width: calc(100% / 3 - 0.5rem);
+        &:last-child:nth-child(3n-1)
+            width: calc((100% / 3 - 0.5rem) * 1);
+            margin-right: calc(50% - (50% - 0.5rem) / 3);
+

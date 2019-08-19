@@ -1,6 +1,6 @@
 <template>
   <footer class="page-footer">
-    <div class="page-footer__content width">
+    <div class="page-footer__content container">
       <section class="page-footer__column text">
         <h4>Highlights</h4>
         <p>
@@ -20,22 +20,22 @@
             target="_blank"
             href="//calendar.google.com/calendar/embed?src=jugend%40johannische-kirche.org&ctz=Europe%2FBerlins"
           >Jugend</a>
-          <br>
+          <br />
           <a
             target="_blank"
             href="//calendar.google.com/calendar/embed?src=41cva8imqg9f443kn41dul8onc%40group.calendar.google.com&ctz=Europe%2FBerlin"
           >SMH</a>
-          <br>
+          <br />
           <a
             target="_blank"
             href="//calendar.google.com/calendar/embed?src=90k02p9ir853ts5ks5hanilpfg%40group.calendar.google.com&ctz=Europe%2FBerlin"
           >Velten</a>
-          <br>
+          <br />
           <a
             target="_blank"
             href="//calendar.google.com/calendar/embed?src=2ma7gn9d8sa5j6ekin4pkhnm4k%40group.calendar.google.com&ctz=Europe%2FBerlin"
           >Urgemeinde</a>
-          <br>
+          <br />
           <a
             target="_blank"
             href="//calendar.google.com/calendar/embed?src=c009ps9dpfhds19bjapr6lvte0%40group.calendar.google.com&ctz=Europe%2FBerlin"

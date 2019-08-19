@@ -1,27 +1,30 @@
 <template>
   <article
-    class="teaser clickable"
-    :class="`${isATM ? 'teaser--is-atm' : ''} ${isHistory ? 'teaser--is-history' : ''}`"
+    class="teaser-event clickable"
+    :class="`${isATM ? 'teaser-event--is-atm' : ''} ${isHistory ? 'teaser-event--is-history' : ''}`"
   >
-    <div class="teaser__info">
+    <div class="teaser-event__info">
       <p>
-        <span class="teaser__date" v-if="page.frontmatter.date">{{page.frontmatter.date | date}}</span>
+        <span
+          class="teaser-event__date"
+          v-if="page.frontmatter.date"
+        >{{page.frontmatter.date | date}}</span>
       </p>
     </div>
-    <div class="teaser__card text">
+    <div class="teaser-event__card text">
       <h2>{{page.frontmatter.title}}</h2>
       <p>{{page.frontmatter.excerpt}}</p>
-      <div class="teaser__button-container">
-        <router-link :to="page.path" class="teaser__button">Mehr</router-link>
+      <div class="teaser-event__button-container">
+        <router-link :to="page.path" class="teaser-event__button">Mehr</router-link>
       </div>
     </div>
-    <footer class="teaser__info" v-if="page.frontmatter.signup.deadline && !isHistory">
+    <footer class="teaser-event__info" v-if="page.frontmatter.signup.deadline && !isHistory">
       <p>
         Anmeldeschluss
         📮
         <span
-          class="teaser__deadline"
-          :class="(isDeadlineSoonOver ? 'teaser__deadline--is-soon' : '')"
+          class="teaser-event__deadline"
+          :class="(isDeadlineSoonOver ? 'teaser-event__deadline--is-soon' : '')"
         >{{ page.frontmatter.signup.deadline | date}}</span>
       </p>
     </footer>

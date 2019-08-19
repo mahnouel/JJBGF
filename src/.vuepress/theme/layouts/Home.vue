@@ -1,11 +1,11 @@
 <template>
   <div>
-    <page-header/>
-    <article class="text width">
-      <Content class="text"/>
-      <event-teaser v-for="page in events" :key="page.key" :page="page"/>
+    <page-header />
+    <article class="text container">
+      <Content class="text" />
+      <teaser-event v-for="page in events" :key="page.key" :page="page" />
     </article>
-    <page-footer/>
+    <page-footer />
   </div>
 </template>
 

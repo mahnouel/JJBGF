@@ -7,10 +7,18 @@
     "build": "yarn vuepress build src -d ./dist"
   },
   "dependencies": {
+    "apollo-boost": "^0.4.4",
+    "apollo-cache-inmemory": "^1.6.3",
+    "apollo-client": "^2.6.4",
+    "apollo-link": "^1.2.12",
+    "apollo-link-http": "^1.5.15",
+    "graphql": "^14.4.2",
+    "graphql-tag": "^2.10.1",
     "markdown-it-footnote": "^3.0.1",
     "moment": "^2.22.2",
     "register-service-worker": "^1.0.0",
     "vue": "^2.5.22",
+    "vue-apollo": "^3.0.0-rc.2",
     "vue-router": "^3.0.1",
     "vuepress": "^1.0.0-alpha.48",
     "vuex": "^3.0.1"
