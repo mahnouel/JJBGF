@@ -111,7 +111,7 @@ export default {
           }
         }
       `,
-      pollInterval: 1000
+      pollInterval: 10000
     });
 
     observable.subscribe({
