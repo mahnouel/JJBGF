@@ -62,13 +62,13 @@ import { ByDate, EventPages, OnlyYear } from "../utils";
 import { ApolloClient } from "apollo-boost";
 import { createHttpLink } from "apollo-link-http";
 import { InMemoryCache } from "apollo-cache-inmemory";
-// import fetch from "node-fetch";
+import fetch from "node-fetch";
 // import { createHttpLink } from "apollo-link-http";
 
 // import VueApollo from "vue-apollo";
 
 const httpLink = createHttpLink({
-  // fetch,
+  fetch,
   uri: "https://api.jjbg-kitawo.de"
 });
 
