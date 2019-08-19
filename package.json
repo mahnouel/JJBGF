@@ -16,6 +16,7 @@
     "graphql-tag": "^2.10.1",
     "markdown-it-footnote": "^3.0.1",
     "moment": "^2.22.2",
+    "node-fetch": "^2.6.0",
     "register-service-worker": "^1.0.0",
     "vue": "^2.5.22",
     "vue-apollo": "^3.0.0-rc.2",
