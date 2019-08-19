@@ -14,8 +14,9 @@
             <strong>Du bist Willkommen!</strong> Gerne kannst du auch Jugendleiter fragen, ob sie Jugendräume für Dich und Deine Freunde öffnen. Kommt vorbei 😉
           </p>
           <room-status v-for="room in rooms" :name="room.name" :is-open="room.open" />
+          <small v-if="room.length === 0">Status läd.. ⏳</small>
           <small
-            v-if="!rooms"
+            v-else-if="!rooms"
           >Die Liveanzeige der Jugendraum Öffnungen ist grade nicht verfügbar. Versuche es bitte in ca. 5 Minuten nochmal, oder wende dich an einen Jugendleiter.</small>
         </article>
       </div>
