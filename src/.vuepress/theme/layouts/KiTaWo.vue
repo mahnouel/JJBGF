@@ -68,7 +68,7 @@ import { InMemoryCache } from "apollo-cache-inmemory";
 // import VueApollo from "vue-apollo";
 
 const httpLink = createHttpLink({
-  fetch,
+  // fetch,
   uri: "https://api.jjbg-kitawo.de"
 });
 
