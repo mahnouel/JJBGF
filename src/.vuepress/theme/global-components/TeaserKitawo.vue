@@ -82,7 +82,6 @@ export default {
   filters: {
     asDate(date) {
       const m = moment.unix(date).utc();
-      console.log(date);
       return m.format("HH:mm") + " Uhr";
     },
     deadline(date) {

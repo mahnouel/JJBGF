@@ -152,6 +152,7 @@ export default {
 
     observable.subscribe({
       next: ({ data }) => {
+        if (!data) return;
         this.rooms = data.rooms;
       }
     });
