@@ -11,7 +11,7 @@
         <article class="text container">
           <h2>Jugendräume</h2>
           <p>
-            <strong>Du bist Willkommen!</strong> Gerne kannst du auch Jugendleiter fragen, ob sie Jugendräume für Dich und Deine Freunde öffnen. Kommt vorbei 😉
+            <strong>Du bist Willkommen!</strong> Gerne kannst du auch Jugendleiter fragen, ob sie Jugendräume für Dich und Deine Freunde öffnen. 😉
           </p>
           <room-status v-for="room in rooms" :name="room.name" :is-open="room.open" />
           <em v-if="rooms.length === 0">Status läd.. ⏳</em>
@@ -22,20 +22,19 @@
       </div>
     </div>
     <div class="invader">
-      Bleib auf dem Laufenden via
-      <a
-        href="//t.me/joinchat/D9iLlQzho6hhU-xtMB3POg"
-        target="_blank"
-      >Telegram</a>
+      Mit
+      <a href="//t.me/joinchat/D9iLlQzho6hhU-xtMB3POg" target="_blank">Telegram</a> bleibst Du auf dem Laufenden.
     </div>
     <article class="text padding">
       <header>
-        <h2>Programmauszug</h2>
-      </header>Demnächst hier verfügbar.. 😉
+        <h2>KiTaWo für Dich</h2>
+      </header>
+      <div class="width text">
+        <p>Nachfolgend ein Ausschnitt aus dem Programm zur KiTaWo. Wir wünschen Dir gute Gespräche und viel Freude!</p>
+      </div>
       <Content class="text" />
-
       <!-- :class="index === 0 && 'bg-green'" -->
-      <!-- <section v-for="(events, day, index) in eventsByDay" class="text">
+      <section v-for="(events, day, index) in eventsByDay" v-if="day > moment" class="text">
         <h3>{{day | asDate}}</h3>
         <div class="teaser-container">
           <teaser-kitawo
@@ -49,7 +48,30 @@
             :location="event.location"
           />
         </div>
-      </section>-->
+      </section>
+      <section class="text width">
+        <header>
+          <h3>Nicht genug?</h3>
+        </header>
+
+        <p>
+          Das vollständige Programm findest Du übrigens unter
+          <a
+            href="//johannischer-kirchentag.de"
+            target="_blank"
+          >johannischer-kirchentag.de</a>
+        </p>
+        <p>
+          Oder alternativ mit Lesezeichenfunktion, ganz praktisch unter
+          <a
+            href="//kitawo.fabraham.dev"
+            target="_blank"
+          >kitawo.fabraham.dev</a>
+
+          <br />
+          <!--Diese sind mit verschiedenen Emojis versehen. Ihre Bedeutung kannst du der untenstehenden Legende entnehmen.-->
+        </p>
+      </section>
     </article>
     <!-- <div class="invader">
       Schon gesehen? 🙆 Wir haben
@@ -82,6 +104,7 @@ const httpLink = createHttpLink({
 import gql from "graphql-tag";
 import moment from "moment";
 moment.locale("de");
+moment.utc();
 
 const apolloClient = new ApolloClient({
   link: httpLink,
@@ -122,6 +145,11 @@ export default {
     });
   },
   computed: {
+    moment() {
+      return moment()
+        .subtract(1, "day")
+        .unix();
+    },
     data() {
       const dataAll = this.$page.frontmatter.data;
       Object.keys(dataAll).forEach(location => {
@@ -165,7 +193,8 @@ export default {
   },
   filters: {
     asDate(date) {
-      const m = moment.unix(date);
+      const m = moment.unix(date).utc();
+
       const isSameYear = m.isSame(new Date(), "year");
       if (isSameYear) {
         return m.calendar(null, {

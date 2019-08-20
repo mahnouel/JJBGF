@@ -458,7 +458,8 @@ data:
       child: false
     - startDate: 1566311400
       endDate: -1
-      name: 'Friedensstadt: Aktuelles aus Patenschaft und praktischer Arbeit'
+      name: 'Friedensstadt: Aktuelles aus Patenschaft und 
+      praktischer Arbeit'
       description: Vortrag und Gesprächskreis von und mit Christoph Glistau, Matthias
         Müller und Stefan Tzschentke
       place: Kirche
@@ -1061,7 +1062,7 @@ data:
       cost: false
       tel: false
       id: 100
-      youth: true
+      youth: false
       child: false
       category: 🙏
     - startDate: 1566504000
@@ -1218,7 +1219,7 @@ data:
       cost: false
       tel: false
       id: 115
-      youth: true
+      youth: false
       child: false
       category: 🙏
     - startDate: 1566583200
@@ -1272,7 +1273,7 @@ data:
       cost: false
       tel: false
       id: 120
-      youth: true
+      youth: false
       child: false
       category: 🙏
     - startDate: 1566687600
@@ -1295,9 +1296,9 @@ data:
       cost: false
       tel: false
       id: 122
-      youth: true
-    child: false
-    category: 🙏
+      youth: false
+      child: false
+      category: 🙏
   - day: 1566777600
     events:
     - startDate: 1566777600
@@ -1525,7 +1526,18 @@ data:
       endDate: -1
       name: Abendgebet
       description: ""
-      place: Gemeinderaum , reverti-Abschiedsraum
+      place: Gemeinderaum
+      cost: false
+      tel: false
+      id: 144
+      youth: true
+      child: false
+      category: 🙏
+    - startDate: 1566151200
+      endDate: -1
+      name: Abendgebet
+      description: ""
+      place: Gemeinderaum
       cost: false
       tel: false
       id: 144
@@ -1536,7 +1548,7 @@ data:
       endDate: 1566165600
       name: Live Musik mit „PrimeTime“, der Rock&Pop-Coverband aus Trebbin
       description: Feierabend im Biergarten
-      place: Gemeinderaum , reverti-Abschiedsraum
+      place: Gemeinderaum , Reverti
       cost: false
       tel: false
       id: 145
@@ -1550,7 +1562,7 @@ data:
       cost: false
       tel: false
       id: 146
-      youth: false
+      youth: true
       child: false
     - startDate: 1566163800
       endDate: -1
@@ -1756,7 +1768,7 @@ data:
       endDate: -1
       name: Abendgebet
       description: für Kinder Schule-KiGo-Raum
-      place: Gemeinderaum , reverti-Abschiedsraum
+      place: Gemeinderaum , Reverti
       cost: false
       tel: false
       id: 166
@@ -1885,7 +1897,7 @@ data:
       endDate: -1
       name: 'Bibelkunde: Die Propheten Nahum, Habakuk und Zephania'
       description: Gesprächskreis mit Luise Marek
-      place: reverti-Abschiedsraum
+      place: Reverti
       cost: false
       tel: false
       id: 178
@@ -1957,7 +1969,7 @@ data:
       name: Berufsfelder im Johannischen Sozialwerk
       description: Vortrag und Gesprächskreis für Jugendliche und interessierte Erwachsene
         von und mit Nadine Philipp
-      place: reverti-Abschiedsraum
+      place: Reverti
       cost: false
       tel: false
       id: 185
@@ -1986,7 +1998,7 @@ data:
       child: false
     - startDate: 1566318600
       endDate: -1
-      name: „... dass es endlich werde Friede auf der ganzenErde!“
+      name: „... dass es endlich werde Friede auf der ganzen Erde!“
       description: Vortrag und Gesprächskreis von und mit Claudia Brunner, Johannes
         Franke und Angela Passinger
       place: Gemeinderaum
@@ -2000,7 +2012,7 @@ data:
       endDate: -1
       name: Das Leben und Wirken Jesu Christi aus johannischer Sicht
       description: Vortrag und Gesprächskreis von und mit Andreas Schwiewagner
-      place: reverti-Abschiedsraum
+      place: Reverti
       cost: false
       tel: false
       id: 189
@@ -2031,7 +2043,17 @@ data:
       endDate: -1
       name: Abendgebet
       description: für Kinder Schule-KiGo-Raum
-      place: Gemeinderaum, reverti-Abschiedsraum
+      place: Gemeinderaum
+      cost: false
+      tel: false
+      id: 192
+      youth: false
+      child: false
+    - startDate: 1566324000
+      endDate: -1
+      name: Abendgebet
+      description: für Kinder Schule-KiGo-Raum
+      place: Reverti
       cost: false
       tel: false
       id: 192
@@ -2217,7 +2239,7 @@ data:
       endDate: -1
       name: Geben und Nehmen - Kirchenfinanzen aktuell
       description: Vortrag und Gesprächskreis von und mit Axel Glanck und Matthias Müller
-      place: reverti-Abschiedsraum
+      place: Reverti
       cost: false
       tel: false
       id: 210
@@ -2269,7 +2291,7 @@ data:
       endDate: -1
       name: Wandel für das Klima
       description: Gesprächskreis mit Elias Dannenberg, Julia Schäfer und Stefan Tzschentke
-      place: reverti-Abschiedsraum
+      place: Reverti
       cost: false
       tel: false
       id: 215
@@ -2290,7 +2312,7 @@ data:
       endDate: -1
       name: Abendgebet
       description: für Kinder im Schule KiGoRaum
-      place: 'Gemeinderaum, reverti-Abschiedsraum '
+      place: 'Gemeinderaum, Reverti '
       cost: false
       tel: false
       id: 217
@@ -2314,7 +2336,7 @@ data:
       cost: false
       tel: false
       id: 219
-      youth: false
+      youth: true
       child: false
     - startDate: 1566414000
       endDate: -1
@@ -2518,7 +2540,7 @@ data:
       endDate: 1566495900
       name: Letzte Hilfe
       description: Workshop von und mit Monika Alcantara-Klamm - Teil 1
-      place: reverti-Abschiedsraum
+      place: Reverti
       cost: false
       tel: false
       id: 239
@@ -2548,11 +2570,22 @@ data:
       endDate: -1
       name: Abendgebet
       description: ""
-      place: Gemeinderaum, reverti-Abschiedsraum
+      place: Reverti
       cost: false
       tel: false
       id: 242
-      youth: true
+      youth: false
+      child: false
+      category: 🙏
+    - startDate: 1566496800
+      endDate: -1
+      name: Abendgebet
+      description: ""
+      place: Gemeinderaum
+      cost: false
+      tel: false
+      id: 242
+      youth: false
       child: false
       category: 🙏
     - startDate: 1566496800
@@ -2589,7 +2622,7 @@ data:
       endDate: 1566504900
       name: Letzte Hilfe
       description: Workshop von und mit Monika Alcantara-Klamm - Teil 2
-      place: reverti-Abschiedsraum
+      place: Reverti
       cost: false
       tel: false
       id: 246
@@ -2754,7 +2787,7 @@ data:
       endDate: -1
       name: Und ... wie begegnet dir deine geistige Führung?
       description: Gesprächskreis mit Burkhard Romig und Ariane Schätzle
-      place: reverti-Abschiedsraum
+      place: Reverti
       cost: false
       tel: false
       id: 262
@@ -2828,11 +2861,11 @@ data:
       endDate: -1
       name: Abendgebet
       description: ""
-      place: Gemeinderaum, reverti-Abschiedsraum
+      place: Reverti
       cost: false
       tel: false
       id: 269
-      youth: true
+      youth: false
       child: false
       category: 🙏
     - startDate: 1566576000
@@ -2954,7 +2987,7 @@ data:
       endDate: -1
       name: Der Meister
       description: Dokumentarfilm über Joseph Weißenberg
-      place: reverti-Abschiedsraum
+      place: Reverti
       cost: false
       tel: false
       id: 281
@@ -3006,7 +3039,7 @@ data:
       endDate: -1
       name: Abendgebet
       description: ""
-      place: Wiese auf der Südseite des Frieda-Müller-Hauses
+      place: Frieda-Müller-Haus
       cost: false
       tel: false
       id: 286
@@ -3017,7 +3050,7 @@ data:
       endDate: -1
       name: Die Rückgabe der Friedensstadt
       description: Dokumentarfilm von Jethro Konkel
-      place: reverti-Abschiedsraum
+      place: Reverti
       cost: false
       tel: false
       id: 287
@@ -3037,7 +3070,7 @@ data:
       endDate: -1
       name: Die Fahnen Michaels
       description: Dokumentarfilm über die Bedeutung der Banner der Johannischen Kirche
-      place: reverti-Abschiedsraum
+      place: Reverti
       cost: false
       tel: false
       id: 289
@@ -3047,18 +3080,29 @@ data:
       endDate: -1
       name: Abendgebet
       description: ""
-      place: Gemeinder. , reverti-Abschiedsr.
+      place: Gemeinderaum
       cost: false
       tel: false
       id: 290
-      youth: true
+      youth: false
+      child: false
+      category: 🙏
+    - startDate: 1566583200
+      endDate: -1
+      name: Abendgebet
+      description: ""
+      place: Reverti
+      cost: false
+      tel: false
+      id: 290
+      youth: false
       child: false
       category: 🙏
     - startDate: 1566584100
       endDate: -1
       name: Bilder aus dem Kirchenjahr 2018 / 2019
       description: Ein Rückblick mit Live-Kommentar von Wolfgang Pohl
-      place: reverti-Abschiedsraum
+      place: Reverti
       cost: false
       tel: false
       id: 291
