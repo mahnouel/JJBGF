@@ -117,6 +117,18 @@ const apolloClient = new ApolloClient({
   }
 });
 
+Object.defineProperty(Array.prototype, "flat", {
+  value: function(depth = 1) {
+    return this.reduce(function(flat, toFlatten) {
+      return flat.concat(
+        Array.isArray(toFlatten) && depth > 1
+          ? toFlatten.flat(depth - 1)
+          : toFlatten
+      );
+    }, []);
+  }
+});
+
 export default {
   data() {
     return {
@@ -185,7 +197,7 @@ export default {
 
       // flatten object
       Object.keys(eventsByDay).forEach(day => {
-        eventsByDay[day] = eventsByDay[day].flat();
+        eventsByDay[day] = Array.from(eventsByDay[day]).flat();
       });
 
       return eventsByDay;
