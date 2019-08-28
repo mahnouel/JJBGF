@@ -1,0 +1,25 @@
+title: Erntewochenende
+navtitle: 🍎 Seminar
+layout: EventPage
+permalink: /:year/seminare/ernten/
+
+date: 2019-09-06
+date_end: 2019-09-08
+
+excerpt: "Die Ernte ist groß"
+
+location:
+  name: Frankfurt Oder
+  link: https://www.google.com/maps/place/Johannische+Kirche+Frankfurt+Oder/@52.34792,14.4923613,17z/data=!3m1!4b1!4m5!3m4!1s0x4707990676283145:0x63fd09d750eb33c9!8m2!3d52.34792!4d14.49455
+
+signup:
+  autohide: true
+---
+
+::: slot head
+
+# :sunflower: Ernte&shy;seminar
+
+:::
+Auf dem rießigen Kirchengrunstück in Frankfurt Oder kannste dich so richtig ausprobieren. Es kann geerntet werden, es können Ideen gesammelt werden, welche Projekte man auf dem Grunstück umsetzen will und man kann sich entspannen.
+Der Pool 🛁 steht bereit. Sei dabei!
