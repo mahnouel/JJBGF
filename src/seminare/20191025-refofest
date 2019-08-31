@@ -1,0 +1,28 @@
+---
+title: Refofest
+navtitle: 🚶 Weekend
+layout: EventPage
+featured: true
+permalink: /:year/seminare/refofest/
+date: 2019-10-25
+
+excerpt: "Und wenn ich wüsste, dass morgen die Welt unterginge, würde ich ..."
+
+location:
+  name: Wittenberg
+  link: https://www.google.com/maps/place/Lutherstadt+Wittenberg/@51.9064957,12.5416186,12z/data=!3m1!4b1!4m5!3m4!1s0x47a62fc671ec63cd:0x20db307cf0ad5c10!8m2!3d51.8739831!4d12.6279659
+signup:
+  autohide: true
+---
+
+::: slot head
+
+# Wander&shy;wochenende
+
+:::
+
+... heute noch einen Apfelbaum pflanzen
+... und mich heute noch beim Refo-Fest anmelden!
+Liebe begeisterte Jugendliche, liebe Denker, Entdecker & Weltenretter,
+so wie auch die Reformation erst gelingen konnte durch das Zusammenwirken vieler unterschiedlicher Persönlichkeiten, so suchen wir auch genau DICH für das diesjährige Refo-Fest in Elster/Wittenberg vom 25.-27.10.2019.
+
