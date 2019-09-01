@@ -26,7 +26,7 @@
           Bis
           📮
           <strong>{{$page.frontmatter.signup.deadline | deadline }}</strong>
-          <a class="signup" href>Anmelden</a> ✨
+          <a class="signup" :href="signup.link">Anmelden</a> ✨
         </p>
         <p v-else-if="!isHistory && !isDeadlineOver">
           Schnell
