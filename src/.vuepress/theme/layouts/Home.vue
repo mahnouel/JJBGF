@@ -1,10 +1,14 @@
 <template>
   <div>
     <page-header />
+
     <article class="text container">
       <Content class="text" />
-      <teaser-event v-for="page in events" :key="page.key" :page="page" />
     </article>
+
+    <section class="container">
+      <teaser-event v-for="page in events" :key="page.key" :page="page" />
+    </section>
     <page-footer />
   </div>
 </template>

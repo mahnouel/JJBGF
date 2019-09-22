@@ -4,6 +4,15 @@ layout: Home
 permalink: /
 ---
 
+<h1>Herzlich Willkommen</h1>
+
+Wir sind
+die Johannische Jugend.
+Verbunden durch den innigen
+Glauben an Gott
+bekennen wir uns zur Lehre Joseph Weißenbergs
+(1855 — 1941). <router-link to="/about/">Mehr</router-link>
+
 <!-- ## 2019 -->
 
 <!-- > Wir kämpfen für Freiheit und Reinheit, doch nicht wie die Welt dafür kämpft; wir beten zu Gottes Dreieinheit, dass Liebe das Hasssende dämpft. Wir künden vom Segen des Vergebens an alle, die weh uns tun; wir wollen, dass Ströme des Lebens auf allen Menschen ruhn.
