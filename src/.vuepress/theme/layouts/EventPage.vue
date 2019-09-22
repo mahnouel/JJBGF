@@ -26,11 +26,11 @@
           Bis
           📮
           <strong>{{$page.frontmatter.signup.deadline | deadline }}</strong>
-          <a class="signup" :href="signup.link">Anmelden</a> ✨
+          <a class="signup" :href="signup.link" target="_blank">Anmelden</a> ✨
         </p>
         <p v-else-if="!isHistory && !isDeadlineOver">
           Schnell
-          <a class="signup" :href="signup.link" target="_blank" href>Anmelden</a> ✨
+          <a class="signup" :href="signup.link" target="_blank">Anmelden</a> ✨
         </p>
       </div>
 
