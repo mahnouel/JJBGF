@@ -3,7 +3,7 @@ title: Schwedenurlaub 2020
 navtitle: 🇸🇪 Schwedenurlaub
 layout: EventPage
 featured: true
-permalink: /:year/seminare/schwedenurlaub/
+permalink: /:year/seminare/schweden/
 
 date: 2020-05-17
 date_end: 2020-05-24
@@ -12,11 +12,11 @@ excerpt: Urlaub mit der Jugend in Schweden.
 
 location:
   name: Linneryd
-  link: https://www.google.com/maps/place/Kyrkv%C3%A4gen+24,+360+24+Linneryd,+Schweden/@56.6580354,15.1301106,15.71z/data=!4m5!3m4!1s0x4656fcc1919771df:0x74be72867db5a6c1!8m2!3d56.6592204!4d15.1301875
-
+  link: https://goo.gl/maps/QezGfdejiokj3FSCA
+  
 signup:
   autohide: true
-  link: https://cloud.johannische-kirche.org/index.php/f/205595
+  link: https://cloud.johannische-kirche.org/index.php/s/g5rZ856FAX8DydR
 ---
 
 ::: slot head
