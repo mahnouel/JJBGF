@@ -1,5 +1,5 @@
 ---
-title: Frühlingsseminar
+title: Frühlings&shy;seminar
 navtitle: 🌻 Seminar
 layout: EventPage
 permalink: /:year/seminare/fruehling/

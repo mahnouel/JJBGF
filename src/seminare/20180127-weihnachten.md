@@ -1,5 +1,5 @@
 ---
-title: Weihnachtsseminar
+title: Weihnachts&shy;seminar
 navtitle: 🎅 Seminar
 layout: EventPage
 permalink: /:year/seminare/weihnachten/
