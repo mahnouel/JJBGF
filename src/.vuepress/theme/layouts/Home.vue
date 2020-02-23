@@ -14,18 +14,16 @@
 </template>
 
 <script>
-import { ByDate, EventPages } from "../utils";
+import { ByDate, ByPriority, EventPages } from "../utils";
 
 export default {
   computed: {
     events() {
       return EventPages(this.$site)
         .filter(page => page.frontmatter.featured)
-        .sort(ByDate("ASC"));
+        .sort(ByDate("ASC"))
+        .sort(ByPriority("DESC"));
     }
   }
 };
 </script>
-
-
-

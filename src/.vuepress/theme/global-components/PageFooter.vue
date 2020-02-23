@@ -9,7 +9,8 @@
             v-for="page in events"
             :key="page.key"
             class="button"
-          >{{page.frontmatter.navtitle}}</router-link>
+            v-html="page.frontmatter.navtitle"
+          ></router-link>
           <router-link to="/events/" class="button">📅 Events</router-link>
         </p>
       </section>
@@ -19,27 +20,32 @@
           <a
             target="_blank"
             href="//calendar.google.com/calendar/embed?src=jugend%40johannische-kirche.org&ctz=Europe%2FBerlins"
-          >Jugend</a>
+            >Jugend</a
+          >
           <br />
           <a
             target="_blank"
             href="//calendar.google.com/calendar/embed?src=41cva8imqg9f443kn41dul8onc%40group.calendar.google.com&ctz=Europe%2FBerlin"
-          >SMH</a>
+            >SMH</a
+          >
           <br />
           <a
             target="_blank"
             href="//calendar.google.com/calendar/embed?src=90k02p9ir853ts5ks5hanilpfg%40group.calendar.google.com&ctz=Europe%2FBerlin"
-          >Velten</a>
+            >Velten</a
+          >
           <br />
           <a
             target="_blank"
             href="//calendar.google.com/calendar/embed?src=2ma7gn9d8sa5j6ekin4pkhnm4k%40group.calendar.google.com&ctz=Europe%2FBerlin"
-          >Urgemeinde</a>
+            >Urgemeinde</a
+          >
           <br />
           <a
             target="_blank"
             href="//calendar.google.com/calendar/embed?src=c009ps9dpfhds19bjapr6lvte0%40group.calendar.google.com&ctz=Europe%2FBerlin"
-          >Chor</a>
+            >Chor</a
+          >
         </p>
       </section>
       <section class="page-footer__column text">
@@ -49,7 +55,8 @@
           <a
             target="_blank"
             href="//cloud.johannische-kirche.org/index.php/s/NjIqFZcWUL2EMF2?path=%2FAnmeldungen#"
-          >Anmeldungen</a>
+            >Anmeldungen</a
+          >
           <a target="_blank" href="//www.instagram.com/jjbgf.de">Instagram</a>
           <a target="_blank" href="//www.facebook.com/jjbgf">Facebook</a>
         </p>
@@ -71,5 +78,3 @@ export default {
   }
 };
 </script>
-
-
