@@ -12,20 +12,28 @@
             class="location"
             target="_blank"
             :href="$page.frontmatter.location.link"
-          >{{$page.frontmatter.location.name}}</a>
+            >{{ $page.frontmatter.location.name }}</a
+          >
         </p>
         <p v-if="$page.frontmatter.date" title="Wann?">
           📅
-          <strong>{{$page.frontmatter.date | date }}</strong>
+          <strong>{{ $page.frontmatter.date | date }}</strong>
           <span v-if="$page.frontmatter.date_end">
             —
-            <strong>{{$page.frontmatter.date_end | date }}</strong>
+            <strong>{{ $page.frontmatter.date_end | date }}</strong>
           </span>
         </p>
-        <p v-if="$page.frontmatter.signup.deadline && !isHistory && !isDeadlineOver">
-          Bis
-          📮
-          <strong>{{$page.frontmatter.signup.deadline | deadline }}</strong>
+
+        <p v-if="timeToRelease">
+          Anmeldung <strong>{{ timeToRelease }}</strong> ⏰
+        </p>
+        <p
+          v-else-if="
+            $page.frontmatter.signup.deadline && !isHistory && !isDeadlineOver
+          "
+        >
+          Bis 📮
+          <strong>{{ $page.frontmatter.signup.deadline | deadline }}</strong>
           <a class="signup" :href="signup.link" target="_blank">Anmelden</a> ✨
         </p>
         <p v-else-if="!isHistory && !isDeadlineOver">
@@ -36,15 +44,23 @@
 
       <Content class="text" />
 
+      <div class="info" v-if="timeToRelease">
+        <p>
+          Anmeldung <strong>{{ timeToRelease }}</strong> ⏰
+        </p>
+      </div>
       <div
-        v-if="signup && !isHistory && !isATM"
+        v-else-if="signup && !isHistory && !isATM"
         class="info clickable"
         :class="isDeadlineOver ? '' : 'info--signup'"
       >
-        <signup-button :href="signup.link" target="_blank">{{signup.text}}</signup-button>
-        <small v-if="signup.annotation">{{signup.annotation}}</small>
+        <signup-button :href="signup.link" target="_blank">{{
+          signup.text
+        }}</signup-button>
+        <small v-if="signup.annotation">{{ signup.annotation }}</small>
         <small v-else-if="isDeadlineOver">
-          <strong>Am {{$page.frontmatter.signup.deadline | date }}</strong> endete die Anmeldefrist.
+          <strong>Am {{ $page.frontmatter.signup.deadline | date }}</strong>
+          endete die Anmeldefrist.
         </small>
       </div>
 
@@ -58,7 +74,8 @@
               class="location"
               target="_blank"
               :href="$page.frontmatter.location.link"
-            >{{$page.frontmatter.location.name}}</a>
+              >{{ $page.frontmatter.location.name }}</a
+            >
           </span>
         </p>
       </div>
@@ -105,6 +122,20 @@ export default {
 
     isHistory() {
       return moment().isAfter(this.$page.frontmatter.date);
+    },
+
+    timeToRelease() {
+      if (!this.$page.frontmatter.signup) return -1;
+      const releaseTime = moment(this.$page.frontmatter.signup.releasetime);
+      const now = moment();
+
+      if (now.isAfter(releaseTime)) return false;
+
+      return now.to(releaseTime);
+    },
+
+    timeToReleaseFormat() {
+      const duration = moment.duration(this.timeToRelease);
     },
 
     signup() {
