@@ -125,7 +125,7 @@ export default {
     },
 
     timeToRelease() {
-      if (!this.$page.frontmatter.signup) return -1;
+      if (!this.$page.frontmatter.signup) return false;
       const releaseTime = moment(this.$page.frontmatter.signup.releasetime);
       const now = moment();
 
