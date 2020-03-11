@@ -6,11 +6,8 @@ permalink: /
 
 <h1>Herzlich Willkommen</h1>
 
-Wir sind
-die Johannische Jugend.
-Verbunden durch den innigen
-Glauben an Gott
-bekennen wir uns zur Lehre Joseph Weißenbergs
+Wir sind die Johannische Jugend. Verbunden durch den innigen
+Glauben an Gott bekennen wir uns zur Lehre Joseph Weißenbergs
 (1855 — 1941). <router-link to="/about/">Mehr</router-link>
 
 <!-- ## 2019 -->

@@ -15,12 +15,12 @@
       </p>
     </div>
     <div class="teaser-event__card text">
-      <h2 v-html="page.frontmatter.title"></h2>
+      <h3 class="teaser__heading" v-html="page.frontmatter.title" />
       <p>{{ page.frontmatter.excerpt }}</p>
       <div class="teaser-event__button-container">
-        <router-link :to="page.path" class="teaser-event__button"
-          >Mehr</router-link
-        >
+        <router-link :to="page.path" class="teaser-event__button">
+          Mehr
+        </router-link>
       </div>
     </div>
     <footer
