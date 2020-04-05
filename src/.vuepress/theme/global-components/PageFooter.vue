@@ -16,37 +16,13 @@
       </section>
       <section class="page-footer__column text">
         <h4>Kalender</h4>
-        <p>
-          <a
-            target="_blank"
-            href="//calendar.google.com/calendar/embed?src=jugend%40johannische-kirche.org&ctz=Europe%2FBerlins"
-            >Jugend</a
-          >
-          <br />
-          <a
-            target="_blank"
-            href="//calendar.google.com/calendar/embed?src=41cva8imqg9f443kn41dul8onc%40group.calendar.google.com&ctz=Europe%2FBerlin"
-            >SMH</a
-          >
-          <br />
-          <a
-            target="_blank"
-            href="//calendar.google.com/calendar/embed?src=90k02p9ir853ts5ks5hanilpfg%40group.calendar.google.com&ctz=Europe%2FBerlin"
-            >Velten</a
-          >
-          <br />
-          <a
-            target="_blank"
-            href="//calendar.google.com/calendar/embed?src=2ma7gn9d8sa5j6ekin4pkhnm4k%40group.calendar.google.com&ctz=Europe%2FBerlin"
-            >Urgemeinde</a
-          >
-          <br />
-          <a
-            target="_blank"
-            href="//calendar.google.com/calendar/embed?src=c009ps9dpfhds19bjapr6lvte0%40group.calendar.google.com&ctz=Europe%2FBerlin"
-            >Chor</a
-          >
-        </p>
+        <ul class="list-reset">
+          <li v-for="calendar in calendarList">
+            <a target="_blank" :href="calendar.url">
+              {{ calendar.title }}
+            </a>
+          </li>
+        </ul>
       </section>
       <section class="page-footer__column text">
         <h4>Mehr</h4>
@@ -67,8 +43,14 @@
 
 <script>
 import { ByDate, EventPages } from "../utils";
+import CalendarList from "../../../data/calendar-list.json";
 
 export default {
+  data() {
+    return {
+      calendarList: CalendarList
+    };
+  },
   computed: {
     events() {
       return EventPages(this.$site)

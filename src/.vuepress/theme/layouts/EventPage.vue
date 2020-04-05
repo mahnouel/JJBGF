@@ -5,82 +5,78 @@
       <header class="header">
         <Content slot-key="head" />
       </header>
+
       <div class="info">
-        <p v-if="$page.frontmatter.location" title="Wo?">
-          📍
-          <a
-            class="location"
-            target="_blank"
-            :href="$page.frontmatter.location.link"
-            >{{ $page.frontmatter.location.name }}</a
-          >
-        </p>
-        <p v-if="$page.frontmatter.date" title="Wann?">
-          📅
-          <strong>{{ $page.frontmatter.date | date }}</strong>
-          <span v-if="$page.frontmatter.date_end">
-            —
-            <strong>{{ $page.frontmatter.date_end | date }}</strong>
-          </span>
-        </p>
-
-        <p v-if="timeToRelease">
-          Anmeldung <strong>{{ timeToRelease }}</strong> ⏰
-        </p>
-        <p
-          v-else-if="
-            $page.frontmatter.signup.deadline && !isHistory && !isDeadlineOver
-          "
-        >
-          Bis 📮
-          <strong>{{ $page.frontmatter.signup.deadline | deadline }}</strong>
-          <a class="signup" :href="signup.link" target="_blank">Anmelden</a> ✨
-        </p>
-        <p v-else-if="!isHistory && !isDeadlineOver">
-          Schnell
-          <a class="signup" :href="signup.link" target="_blank">Anmelden</a> ✨
-        </p>
+        <event-location :location="$page.frontmatter.location" />
+        <event-date :date="$page.frontmatter.date" />
+        <event-signup
+          :date="$page.frontmatter.date"
+          :signup="$page.frontmatter.signup"
+          :is-fully-booked="isFullyBooked"
+          :is-canceled="!!this.canceled"
+        />
       </div>
-
+      <p
+        v-if="
+          $page.frontmatter.notification &&
+            $page.frontmatter.notification.summary
+        "
+        class="event-notification"
+        v-html="$page.frontmatter.notification.summary"
+      />
       <Content class="text" />
 
-      <div class="info" v-if="timeToRelease">
-        <p>
+      <div
+        v-if="eventState === EVENT_STATE.upcomming"
+        :class="{
+          'info--signup':
+            isRegAvaiable &&
+            regState !== REGESTRATION_STATE.availableButDeadlineExpired
+        }"
+        class="info clickable"
+      >
+        <p v-if="isRegAvaiable">
+          <signup-button :href="signup.link" target="_blank">
+            {{ signup.text }}
+          </signup-button>
+          <small v-if="signup.annotation">{{ signup.annotation }}</small>
+          <small
+            v-if="regState === REGESTRATION_STATE.availableButDeadlineExpired"
+          >
+            <strong> Am {{ $page.frontmatter.signup.end | date }} </strong>
+            endete die Anmeldefrist.
+          </small>
+        </p>
+        <p
+          v-else-if="regState === REGESTRATION_STATE.soonAvailableWithCountdown"
+        >
           Anmeldung <strong>{{ timeToRelease }}</strong> ⏰
         </p>
-      </div>
-      <div
-        v-else-if="signup && !isHistory && !isATM"
-        class="info clickable"
-        :class="isDeadlineOver ? '' : 'info--signup'"
-      >
-        <signup-button :href="signup.link" target="_blank">{{
-          signup.text
-        }}</signup-button>
-        <small v-if="signup.annotation">{{ signup.annotation }}</small>
-        <small v-else-if="isDeadlineOver">
-          <strong>Am {{ $page.frontmatter.signup.deadline | date }}</strong>
-          endete die Anmeldefrist.
-        </small>
+        <p v-else-if="regState === REGESTRATION_STATE.unavailableFullyBooked">
+          ℹ️ <strong>Die maximale Teilnehmeranzahl ist erreicht.</strong>
+        </p>
+        <p v-else-if="regState === REGESTRATION_STATE.unavailableCanceled">
+          ℹ️ <strong>{{ canceled.text }}</strong>
+        </p>
       </div>
 
-      <div class="info" v-else-if="isATM">
+      <div v-else-if="eventState === EVENT_STATE.active" class="info">
         <p>
           Diese Veranstaltung hat begonnen. 👏
           <span v-if="$page.frontmatter.location">
             <br />
             <strong>Anfahrt:</strong> 📍
             <a
+              :href="$page.frontmatter.location.link"
               class="location"
               target="_blank"
-              :href="$page.frontmatter.location.link"
               >{{ $page.frontmatter.location.name }}</a
             >
           </span>
         </p>
       </div>
 
-      <div class="info" v-else-if="isHistory">
+      <div v-else-if="eventState === EVENT_STATE.archived" class="info">
         Diese Veranstaltung ist
         <strong>archiviert</strong>. Zur
         <router-link class="button" to="/events/">📅 Übersicht</router-link>
@@ -96,43 +92,140 @@ import Events from "./Events";
 import Home from "./Home";
 moment.locale("de");
 
+import {
+  REGESTRATION_STATE,
+  EVENT_STATE,
+  isRegestrationAvailable,
+  getRegestrationState
+} from "../utils";
+
 export default {
+  filters: {
+    date(date) {
+      const m = moment(date);
+      const isSameYear = m.isSame(new Date(), "year");
+      if (isSameYear) {
+        return moment(date).calendar(null, {
+          sameDay: "[Heute]",
+          nextDay: "[Morgen]",
+          nextWeek: "DD. MMMM",
+          lastDay: "DD. MMMM",
+          lastWeek: "DD. MMMM",
+          sameElse: "DD. MMMM"
+        });
+      }
+      return m.format("DD. MMMM YYYY");
+    },
+    deadline(date) {
+      const m = moment(date);
+      const isSameYear = m.isSame(new Date(), "year");
+      if (isSameYear) {
+        return moment(date).calendar(null, {
+          sameDay: "[Heute 😱]",
+          nextDay: "[Morgen]",
+          nextWeek: "dddd",
+          lastDay: "[Gestern 😴]",
+          lastWeek: "DD. MMMM",
+          sameElse: "DD. MMMM"
+        });
+      }
+      return m.format("DD. MMMM YYYY");
+    }
+  },
+  data() {
+    return {
+      REGESTRATION_STATE,
+      EVENT_STATE
+    };
+  },
+
   computed: {
     header() {
       return this.$page.frontmatter.header;
     },
 
-    isDeadlineOver() {
-      const signup = this.$page.frontmatter.signup;
-      const deadline = signup.deadline || this.$page.frontmatter.date;
-      return moment().isAfter(deadline, "day");
+    momentStart() {
+      return moment(this.$page.frontmatter.date.start);
     },
 
-    isATM() {
-      if (this.$page.frontmatter.date_end) {
-        const startDayAfterToday = moment().isAfter(
-          this.$page.frontmatter.date
-        );
-        const endDayBeforeToday = moment().isBefore(
-          this.$page.frontmatter.date_end
-        );
-        return startDayAfterToday && endDayBeforeToday;
+    momentEnd() {
+      if (!this.$page.frontmatter.date.end) return this.momentStart;
+
+      return moment(this.$page.frontmatter.date.end);
+    },
+
+    momentDeadline() {
+      if (!this.signup?.end) return false;
+      return moment(this.signup.end);
+    },
+
+    momentReleaseTime() {
+      if (!this.signup?.start) return false;
+      return moment(this.signup.start);
+    },
+
+    isRegAvaiable() {
+      return isRegestrationAvailable(this.regState);
+    },
+
+    canceled() {
+      const canceled = this.$page.frontmatter.canceled;
+      if (canceled) {
+        return {
+          text:
+            "Diese Veranstaltung wurde abgesagt. Für weitere Informationen wendet euch an einen Jugendleiter.",
+          ...canceled
+        };
+      } else {
+        return false;
       }
     },
 
-    isHistory() {
-      return moment().isAfter(this.$page.frontmatter.date);
+    regState() {
+      return getRegestrationState({
+        start: this.momentStart,
+        signupStart: this.momentReleaseTime,
+        signupEnd: this.momentDeadline,
+        isFullyBooked: this.isFullyBooked,
+        isCanceled: !!this.canceled
+      });
+    },
+
+    eventState() {
+      if (this.isTodayAfterStart && this.isTodayBeforeEnd)
+        return EVENT_STATE.active;
+      if (this.isTodayAfterEnd) return EVENT_STATE.archived;
+      return EVENT_STATE.upcomming;
+    },
+
+    hasDeadline() {
+      return !!this.signup.end;
+    },
+
+    isTodayAfterEnd() {
+      return moment().isAfter(this.momentEnd);
+    },
+
+    isTodayAfterStart() {
+      return moment().isAfter(this.momentStart);
+    },
+
+    isTodayBeforeEnd() {
+      return moment().isBefore(this.momentEnd);
+    },
+
+    isFullyBooked() {
+      return this.signup.fullyBooked || false;
     },
 
     timeToRelease() {
-      if (!this.$page.frontmatter.signup) return false;
-      if (!this.$page.frontmatter.signup.releasetime) return false;
-      const releaseTime = moment(this.$page.frontmatter.signup.releasetime);
+      if (!this.momentReleaseTime) return false;
+
       const now = moment();
 
-      if (now.isAfter(releaseTime)) return false;
+      if (now.isAfter(this.momentReleaseTime)) return false;
 
-      return now.to(releaseTime);
+      return now.to(this.momentReleaseTime);
     },
 
     timeToReleaseFormat() {
@@ -152,39 +245,6 @@ export default {
       } else {
         return false;
       }
-    }
-  },
-
-  filters: {
-    date: function(date) {
-      const m = moment(date);
-      const isSameYear = m.isSame(new Date(), "year");
-      if (isSameYear) {
-        return moment(date).calendar(null, {
-          sameDay: "[Heute]",
-          nextDay: "[Morgen]",
-          nextWeek: "DD. MMMM",
-          lastDay: "DD. MMMM",
-          lastWeek: "DD. MMMM",
-          sameElse: "DD. MMMM"
-        });
-      }
-      return m.format("DD. MMMM YYYY");
-    },
-    deadline: function(date) {
-      const m = moment(date);
-      const isSameYear = m.isSame(new Date(), "year");
-      if (isSameYear) {
-        return moment(date).calendar(null, {
-          sameDay: "[Heute 😱]",
-          nextDay: "[Morgen]",
-          nextWeek: "dddd",
-          lastDay: "[Gestern 😴]",
-          lastWeek: "DD. MMMM",
-          sameElse: "DD. MMMM"
-        });
-      }
-      return m.format("DD. MMMM YYYY");
     }
   }
 };

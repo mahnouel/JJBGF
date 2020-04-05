@@ -2,9 +2,10 @@
 title: Weihnachts&shy;seminar
 navtitle: 🎅 Seminar
 layout: EventPage
-permalink: /:year/seminare/weihnachten/
+permalink: /2018/seminare/weihnachten/
 
-date: 2018-12-27
+date:
+  start: 2018-12-27
 
 excerpt: "Keine Angst, es geht darum Ängste zu nehmen."
 

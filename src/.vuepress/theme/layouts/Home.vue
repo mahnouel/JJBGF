@@ -6,8 +6,10 @@
       <Content class="text" />
     </article>
 
-    <section class="container">
+    <section class="container text foo">
+      <header><h2>Sei dabei! 💫</h2></header>
       <teaser-event v-for="page in events" :key="page.key" :page="page" />
+      <small-events />
     </section>
     <page-footer />
   </div>
@@ -27,3 +29,9 @@ export default {
   }
 };
 </script>
+
+<style lang="stylus">
+.foo {
+  margin-top:2rem;
+}
+</style>

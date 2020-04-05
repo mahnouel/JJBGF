@@ -2,10 +2,11 @@
 title: Frühlings&shy;seminar
 navtitle: 🌻 Seminar
 layout: EventPage
-permalink: /:year/seminare/fruehling/
+permalink: /2019/seminare/fruehling/
 
-date: 2019-03-15
-date_end: 2019-03-17
+date:
+  start: 2019-03-15
+  end: 2019-03-17
 
 excerpt: "Im Frühling geht's in den Süden. Zum wunderschönen Heidelberg. 🌄😊"
 
@@ -14,7 +15,7 @@ location:
   link: https://goo.gl/maps/vMF34SpHcrr
 
 signup:
-  deadline: 2019-02-01
+  end: 2019-02-01
 ---
 
 ::: slot head
