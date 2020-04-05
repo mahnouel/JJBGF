@@ -37,7 +37,7 @@
       </p>
     </div>
     <div class="teaser-event__card text">
-      <h3 class="teaser__heading" v-html="page.frontmatter.title" />
+      <h3 class="teaser__heading" v-html="title" />
       <p>{{ page.frontmatter.excerpt }}</p>
 
       <div class="teaser-event__button-container">
@@ -117,6 +117,10 @@ export default {
     };
   },
   computed: {
+    title() {
+      return this.page.frontmatter.displayTitle || this.page.frontmatter.title;
+    },
+
     momentStart() {
       return moment(this.page.frontmatter.date.start);
     },
