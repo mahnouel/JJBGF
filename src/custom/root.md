@@ -10,14 +10,13 @@ Wir sind die Johannische Jugend. Verbunden durch den innigen
 Glauben an Gott bekennen wir uns zur Lehre Joseph Weißenbergs
 (1855 — 1941). <router-link to="/about/">Mehr</router-link>
 
-<!--div class="info text">
+<div class="info text">
 
 **COVID-19**
 
-Liebe Jugendliche,
-besonders in dieser Zeit gilt es den Glauben hoch zu halten. Schließt alles in das Gebet mit ein. Wir wollen in der Jugend füreinander da sein und zusammenstehen. Gemeinsam sind wir stark!
+Liebe Jugendliche, besonders in dieser Zeit gilt es den Glauben hoch zu halten. Schließt alles in das Gebet mit ein. Wir wollen in der Jugend füreinander da sein und zusammenstehen. Gemeinsam sind wir stark!
 
-</div-->
+</div>
 
 <!-- ## 2019 -->
 

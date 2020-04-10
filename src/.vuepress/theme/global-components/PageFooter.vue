@@ -5,8 +5,8 @@
         <h4>Highlights</h4>
         <p>
           <router-link
-            :to="page.path"
             v-for="page in events"
+            :to="page.path"
             :key="page.key"
             class="button"
             v-html="page.frontmatter.navtitle"
@@ -18,7 +18,7 @@
         <h4>Kalender</h4>
         <ul class="list-reset">
           <li v-for="calendar in calendarList">
-            <a target="_blank" :href="calendar.url">
+            <a :href="calendar.url" target="_blank">
               {{ calendar.title }}
             </a>
           </li>
@@ -28,6 +28,9 @@
         <h4>Mehr</h4>
         <p>
           <router-link to="/impressum/" class="button">Impressum</router-link>
+          <a target="_blank" href="//t.me/joinchat/AAAAAE92NHpopjNHyCbXcA">
+            🆕 Telegram</a
+          >
           <a
             target="_blank"
             href="//cloud.johannische-kirche.org/index.php/s/NjIqFZcWUL2EMF2?path=%2FAnmeldungen#"
