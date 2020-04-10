@@ -7,7 +7,7 @@
     </article>
     <div class="container text">
       <div class="easter-invader clickable">
-        🐰☎️ Über die Nummer <strong>030&shy;20965449</strong> erreicht ihr den
+        🐰☎️ Über die Nummer <strong>030&nbsp;20965449</strong> erreicht ihr den
         neuen <strong>Osteranrufbeantworter</strong>. Hinterlasst eine
         Nachricht, einen Gruß oder eine kleine Geschichte. Einen Zusammenschnitt
         gibt es nach Ostern.
