@@ -10,7 +10,7 @@
         🐰☎️ Über die Nummer <strong>030&nbsp;20965449</strong> erreicht ihr den
         neuen <strong>Osteranruf&shy;beantworter</strong> bis einschließlich
         Oster&shy;sonntag. Hinterlasst eine Nachricht, einen Gruß oder eine
-        kleine Geschichte.&nbsp;👩‍🎨 Einen Zusammenschnitt gibt es nach Ostern.
+        kleine Geschichte.&nbsp;👩‍🎨 Einen Zusammen&shy;schnitt gibt es nach Ostern.
       </div>
     </div>
     <div class="container">
