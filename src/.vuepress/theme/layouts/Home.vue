@@ -8,9 +8,9 @@
     <div class="container text">
       <div class="easter-invader clickable">
         🐰☎️ Über die Nummer <strong>030&nbsp;20965449</strong> erreicht ihr den
-        neuen <strong>Osteranrufbeantworter</strong>. Hinterlasst eine
-        Nachricht, einen Gruß oder eine kleine Geschichte. Einen Zusammenschnitt
-        gibt es nach Ostern.
+        neuen <strong>Osteranruf&shy;beantworter</strong> bis einschließlich
+        Oster&shy;sonntag. Hinterlasst eine Nachricht, einen Gruß oder eine
+        kleine Geschichte.&nbsp;👩‍🎨 Einen Zusammenschnitt gibt es nach Ostern.
       </div>
     </div>
     <div class="container">
