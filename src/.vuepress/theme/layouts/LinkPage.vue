@@ -12,7 +12,7 @@
       </p>
       <p>
         Falls dies nicht passiert,
-        <a :href="link" class="link link--is-external">hier klicken</a>
+        <a :href="link" class="link link--is-external">hier&nbsp;klicken</a>
       </p>
     </article>
     <page-footer />
