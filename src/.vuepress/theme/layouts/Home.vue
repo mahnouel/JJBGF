@@ -5,17 +5,10 @@
     <article class="text container">
       <Content class="text" />
     </article>
-    <div class="container text">
-      <div class="easter-invader clickable">
-        🐰☎️ Über die Nummer <strong>030&nbsp;20965449</strong> erreicht ihr den
-        neuen <strong>Osteranruf&shy;beantworter</strong> bis einschließlich
-        Oster&shy;sonntag. Hinterlasst eine Nachricht, einen Gruß oder eine
-        kleine Geschichte.&nbsp;👩‍🎨 Einen Zusammen&shy;schnitt gibt es nach Ostern.
-      </div>
-    </div>
+
     <div class="container">
       <div class="telegram-invader clickable">
-        🆕 Mit dem
+        Mit dem
         <a href="//t.me/joinchat/AAAAAE92NHpopjNHyCbXcA" target="_blank">
           JJBGF News
         </a>
@@ -37,12 +30,22 @@
           </a>
         </p>
       </div>
-      <!--div class="info clickable text">
+
+      <div class="easter-invader clickable">
+        🐰☎️ Vielen Dank für die vielen Nachrichten auf dem
+        <strong>Osteranruf&shy;beantworter</strong>. Die erste Übertragung des
+        Zusammenschnitts gibt es am Dienstag, den <strong>28.04.2020</strong>,
+        nach den Abendgebeten.
+      </div>
+
+      <div class="info clickable text ">
         <p>
-          ➡️ <strong>Am 18. April</strong> eröffnen wir den
-          <strong>Minecraft Server</strong> der Jugend!
+          🆕 Zusammen Block auf Block kreativ werden oder ein Abenteuer auf
+          unserem neuen <strong>Minecraft Server</strong> erleben: Komm doch mal
+          vorbei und sei dabei! 😉 <br />
+          <small>Die Serveradresse bekommst du von deinen Jugendleitern</small>
         </p>
-      </div-->
+      </div>
     </section>
 
     <section class="container text foo">
