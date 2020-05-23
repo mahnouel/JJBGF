@@ -31,12 +31,12 @@
         </p>
       </div>
 
-      <div class="easter-invader clickable">
+      <!-- <div class="easter-invader clickable">
         🐰☎️ Vielen Dank für die vielen Nachrichten auf dem
         <strong>Osteranruf&shy;beantworter</strong>. Die nächste und letzte
         Übertragung des Zusammenschnitts gibt es am Sonnntag, den
         <strong>03.05.2020</strong>, nach den Abendgebeten.
-      </div>
+      </div> -->
 
       <div class="info clickable text ">
         <p>
