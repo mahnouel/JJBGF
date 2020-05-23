@@ -16,14 +16,7 @@
           :is-canceled="!!this.canceled"
         />
       </div>
-      <p
-        v-if="
-          $page.frontmatter.notification &&
-            $page.frontmatter.notification.summary
-        "
-        class="event-notification"
-        v-html="$page.frontmatter.notification.summary"
-      />
+      <event-notification :notification="$page.frontmatter.notification" />
       <Content class="text" />
 
       <div
