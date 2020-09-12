@@ -18,7 +18,7 @@
     "graphql-tag": "^2.10.1",
     "markdown-it-footnote": "^3.0.1",
     "moment": "^2.22.2",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "prettier-eslint": "^9.0.1",
     "prettier-vue": "^1.1.2",
     "register-service-worker": "^1.0.0",
