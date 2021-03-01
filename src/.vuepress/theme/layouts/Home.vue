@@ -15,6 +15,13 @@
         Kanal auf Telegram bleibst Du auf dem Laufenden.
       </div>
     </div>
+
+    <section class="container text foo">
+      <header><h2>Sei dabei! 💫</h2></header>
+      <teaser-event v-for="page in events" :key="page.key" :page="page" />
+      <small-events />
+    </section>
+
     <section class="container text foo">
       <header><h2>Events at home 🏡</h2></header>
 
@@ -48,12 +55,6 @@
       </div>
     </section>
 
-    <section class="container text foo">
-      <header><h2>Sei dabei! 💫</h2></header>
-      <teaser-event v-for="page in events" :key="page.key" :page="page" />
-      <small-events />
-    </section>
-
     <page-footer />
   </div>
 </template>
@@ -65,11 +66,11 @@ export default {
   computed: {
     events() {
       return EventPages(this.$site)
-        .filter(page => page.frontmatter.featured)
+        .filter((page) => page.frontmatter.featured)
         .sort(ByDate("ASC"))
         .sort(ByPriority("DESC"));
-    }
-  }
+    },
+  },
 };
 </script>
 
