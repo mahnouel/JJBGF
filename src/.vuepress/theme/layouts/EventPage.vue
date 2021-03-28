@@ -20,11 +20,14 @@
       <Content class="text" />
 
       <div
-        v-if="eventState === EVENT_STATE.upcomming"
+        v-if="
+          eventState === EVENT_STATE.upcomming &&
+            regState !== REGESTRATION_STATE.hidden
+        "
         :class="{
           'info--signup':
             isRegAvaiable &&
-            regState !== REGESTRATION_STATE.availableButDeadlineExpired
+            regState !== REGESTRATION_STATE.availableButDeadlineExpired,
         }"
         class="info clickable"
       >
@@ -89,7 +92,7 @@ import {
   REGESTRATION_STATE,
   EVENT_STATE,
   isRegestrationAvailable,
-  getRegestrationState
+  getRegestrationState,
 } from "../utils";
 
 export default {
@@ -104,7 +107,7 @@ export default {
           nextWeek: "DD. MMMM",
           lastDay: "DD. MMMM",
           lastWeek: "DD. MMMM",
-          sameElse: "DD. MMMM"
+          sameElse: "DD. MMMM",
         });
       }
       return m.format("DD. MMMM YYYY");
@@ -119,16 +122,16 @@ export default {
           nextWeek: "dddd",
           lastDay: "[Gestern 😴]",
           lastWeek: "DD. MMMM",
-          sameElse: "DD. MMMM"
+          sameElse: "DD. MMMM",
         });
       }
       return m.format("DD. MMMM YYYY");
-    }
+    },
   },
   data() {
     return {
       REGESTRATION_STATE,
-      EVENT_STATE
+      EVENT_STATE,
     };
   },
 
@@ -167,7 +170,7 @@ export default {
         return {
           text:
             "Diese Veranstaltung wurde abgesagt. Für weitere Informationen wendet euch an einen Jugendleiter.",
-          ...canceled
+          ...canceled,
         };
       } else {
         return false;
@@ -180,7 +183,8 @@ export default {
         signupStart: this.momentReleaseTime,
         signupEnd: this.momentDeadline,
         isFullyBooked: this.isFullyBooked,
-        isCanceled: !!this.canceled
+        isCanceled: !!this.canceled,
+        isHidden: this.isHidden,
       });
     },
 
@@ -211,6 +215,10 @@ export default {
       return this.signup.fullyBooked || false;
     },
 
+    isHidden() {
+      return this.signup.hidden || false;
+    },
+
     timeToRelease() {
       if (!this.momentReleaseTime) return false;
 
@@ -233,12 +241,12 @@ export default {
           text: "Anmelden",
           link:
             "//cloud.johannische-kirche.org/index.php/s/NjIqFZcWUL2EMF2?path=%2FAnmeldungen#pdfviewer",
-          ...signup
+          ...signup,
         };
       } else {
         return false;
       }
-    }
-  }
+    },
+  },
 };
 </script>

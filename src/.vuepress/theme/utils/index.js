@@ -39,22 +39,22 @@ export const ByPriority = (order = "DESC") => {
   };
 };
 
-export const OnlyYear = year => {
-  return page => {
+export const OnlyYear = (year) => {
+  return (page) => {
     const pageYear = moment(page.frontmatter.date).format("YYYY");
     return pageYear == year;
   };
 };
 
-export const EventPages = $site => {
-  return $site.pages.filter(page => page.frontmatter.layout === "EventPage");
+export const EventPages = ($site) => {
+  return $site.pages.filter((page) => page.frontmatter.layout === "EventPage");
 };
 
 export const EVENT_STATE = {
   upcomming: "upcomming",
   active: "active",
   archived: "archived",
-  canceled: "canceled"
+  canceled: "canceled",
 };
 
 export const REGESTRATION_STATE = {
@@ -66,14 +66,15 @@ export const REGESTRATION_STATE = {
   unavailableFullyBooked: "unavailableFullyBooked",
   unavailableDeadlineExpired: "unavailableDeadlineExpired",
   unavailableCanceled: "unavailableCanceled",
-  unavailable: "unavailable"
+  unavailable: "unavailable",
+  hidden: "hidden",
 };
 
-export const isRegestrationAvailable = regestrationState => {
+export const isRegestrationAvailable = (regestrationState) => {
   return [
     REGESTRATION_STATE.availableWithDeadline,
     REGESTRATION_STATE.availableButDeadlineExpired,
-    REGESTRATION_STATE.available
+    REGESTRATION_STATE.available,
   ].includes(regestrationState);
 };
 
@@ -82,10 +83,12 @@ export const getRegestrationState = ({
   signupStart,
   signupEnd,
   isFullyBooked,
-  isCanceled
+  isCanceled,
+  isHidden,
 }) => {
   const today = moment();
 
+  if (isHidden) return REGESTRATION_STATE.hidden;
   if (isCanceled) return REGESTRATION_STATE.unavailableCanceled;
   if (today.isAfter(start)) return REGESTRATION_STATE.unavailable;
   if (isFullyBooked) return REGESTRATION_STATE.unavailableFullyBooked;

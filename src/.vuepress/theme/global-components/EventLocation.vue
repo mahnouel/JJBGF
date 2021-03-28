@@ -1,9 +1,17 @@
 <template>
   <p v-if="location" title="Wo?">
     📍
-    <a :href="location.link" class="location" target="_blank">
+    <a
+      v-if="location.link"
+      :href="location.link"
+      class="location"
+      target="_blank"
+    >
       {{ location.name }}
     </a>
+    <span v-else class="location">
+      {{ location.name }}
+    </span>
   </p>
 </template>
 
@@ -11,8 +19,8 @@
 export default {
   props: {
     location: {
-      type: Object
-    }
-  }
+      type: Object,
+    },
+  },
 };
 </script>
