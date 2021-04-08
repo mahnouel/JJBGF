@@ -6,13 +6,37 @@
       <Content class="text" />
     </article>
 
-    <div class="container">
+    <div class="container text">
       <div class="telegram-invader clickable">
         Mit dem
         <a href="//t.me/joinchat/AAAAAE92NHpopjNHyCbXcA" target="_blank">
           JJBGF News
         </a>
         Kanal auf Telegram bleibst Du auf dem Laufenden.
+      </div>
+
+      <div
+        class="info clickable text"
+        style="background-image: radial-gradient(circle at 100%, #ffdd9c, #d6ffd0)"
+      >
+        <p><strong>Umfrage</strong></p>
+        <p>
+          Besonders jetzt ist es wichtig, miteinander in Kontakt zu bleiben.
+          Aber wir sind uns bewusst, dass es noch Defizite in der Kommunikation
+          gibt.
+          <span style="font-weight: 500">
+            Also wollen wir daran arbeiten und die Kommunikation verbessern.
+          </span>
+          Deshalb wäre es Klasse, wenn Du etwas Zeit für eine kurze
+          <a
+            style="background-color: #b1d2a9; font-weight: bold; white-space: nowrap;"
+            href="https://forms.gle/BRfRSsSVx3WXCZzw5"
+            target="_blank"
+          >
+            Umfrage
+          </a>
+          hast. Danke ☺️
+        </p>
       </div>
     </div>
 

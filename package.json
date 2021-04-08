@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "dev": "yarn serve",
+    "start": "yarn serve",
     "serve": "yarn vuepress dev src",
     "build": "yarn vuepress build src -d ./dist"
   },
@@ -25,10 +27,10 @@
     "vue": "^2.5.22",
     "vue-apollo": "^3.0.0-rc.2",
     "vue-router": "^3.0.1",
-    "vuepress": "^1.0.0-alpha.48",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "vuepress": "^1.8.2",
     "@vue/cli-plugin-babel": "^3.0.0",
     "@vue/cli-plugin-eslint": "^3.0.0",
     "@vue/cli-plugin-pwa": "^3.0.0",
