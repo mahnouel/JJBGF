@@ -19,7 +19,7 @@
         class="info clickable text"
         style="background-image: radial-gradient(circle at 100%, #ffdd9c, #d6ffd0)"
       >
-        <p><strong>Umfrage</strong></p>
+        <p><strong>Umfrage zur Kommunikation</strong></p>
         <p>
           Besonders jetzt ist es wichtig, miteinander in Kontakt zu bleiben.
           Aber wir sind uns bewusst, dass es noch Defizite in der Kommunikation
