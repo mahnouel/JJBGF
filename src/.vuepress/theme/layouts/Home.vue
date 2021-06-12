@@ -15,7 +15,7 @@
         Kanal auf Telegram bleibst Du auf dem Laufenden.
       </div>
 
-      <div
+      <!-- <div
         class="info clickable text"
         style="background-image: radial-gradient(circle at 100%, #ffdd9c, #d6ffd0)"
       >
@@ -37,7 +37,7 @@
           </a>
           hast. Danke ☺️
         </p>
-      </div>
+      </div> -->
     </div>
 
     <section class="container text foo">
